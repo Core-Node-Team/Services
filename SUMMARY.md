@@ -1,6 +1,6 @@
 # Table of contents
 
-* [README](README.md)
+* [Core Node Team](README.md)
 
 ## Testnets
 
