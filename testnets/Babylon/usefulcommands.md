@@ -242,6 +242,7 @@ Check Service Logs
 sudo journalctl -u babylond -f --no-hostname -o cat
 ```
 <h1 align=center> Remove Node </h1>
+
 ```
 sudo systemctl stop babylond && sudo systemctl disable babylond && sudo rm /etc/systemd/system/babylond.service && sudo systemctl daemon-reload && rm -rf $HOME/.babylond && rm -rf $HOME/babylon && sudo rm -rf $(which babylond)
 ```
