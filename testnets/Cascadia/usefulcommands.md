@@ -241,6 +241,7 @@ Check Service Logs
 sudo journalctl -u cascadiad -f --no-hostname -o cat
 ```
 <h1 align=center> Remove Node </h1>
+
 ```
 sudo systemctl stop cascadiad && sudo systemctl disable cascadiad && sudo rm /etc/systemd/system/cascadiad.service && sudo systemctl daemon-reload && rm -rf $HOME/.cascadiad && rm -rf $HOME/cascadiad && sudo rm -rf $(which cascadiad)
 ```
