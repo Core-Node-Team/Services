@@ -7,12 +7,12 @@
 * [Babylon](testnets/Babylon/README.md)
   * [Installation](testnets/Babylon/Installation.md)
   * [Snapshot](testnets/Babylon/Snapshot.md)
-  * [Usefull Commands](testnets/Babylon/usefullcommands.md)
+  * [Useful Commands](testnets/Babylon/usefulcommands.md)
 
 * [Cascadia](testnets/Cascadia/README.md)
   * [Installation](testnets/Cascadia/Installation.md)
   * [Snapshot](testnets/Cascadia/Snapshot.md)
-  * [Usefull Commands](testnets/Cascadia/usefullcommands.md)
+  * [Useful Commands](testnets/Cascadia/usefulcommands.md)
 
 * [Ojo](testnets/ojo/README.md)
   * [Installation](testnets/ojo/installation.md)
