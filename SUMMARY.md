@@ -10,4 +10,4 @@
   * [Yararlı Komutlar](testnets/ojo/yararli-komutlar.md)
  
 * [Cascadia](testnets/Cascadia/README.md)
-  *[ınstallation](testnets/Cascadia/Installation.md)
+  * [ınstallation](testnets/Cascadia/Installation.md)
