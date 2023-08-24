@@ -263,7 +263,7 @@ babylond status 2>&1 | jq .SyncInfo
 babylond status 2>&1 | jq .ValidatorInfo
 ```
 
-### Node Sattus
+### Node Status
 
 ```
 babylond status 2>&1 | jq .NodeInfo
