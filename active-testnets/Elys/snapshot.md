@@ -1,6 +1,6 @@
 # Snapshot
 
-```
+```bash
 sudo apt install liblz4-tool
 
 sudo systemctl stop elysd
