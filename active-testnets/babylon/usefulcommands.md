@@ -6,31 +6,33 @@
 
 ### Add New Key
 
-```
+{% code fullWidth="false" %}
+```bash
 babylond keys add wallet
 ```
+{% endcode %}
 
 ### Recover Existing Key
 
-```
+```bash
 babylond keys add wallet --recover
 ```
 
 ### List All Keys
 
-```
+```bash
 babylond keys list
 ```
 
 ### Delete Keys
 
-```
+```bash
 babylond keys delete wallet
 ```
 
 ### Query Wallet Balance
 
-```
+```bash
 babylond q bank balances $(babylond keys show wallet -a)
 ```
 
@@ -40,7 +42,7 @@ babylond q bank balances $(babylond keys show wallet -a)
 
 ### Create New Validator
 
-```
+```go
 babylond tx checkpointing create-validator \
 --amount 1000000ubbn \
 --pubkey $(babylond tendermint show-validator) \
@@ -62,7 +64,7 @@ babylond tx checkpointing create-validator \
 
 ### Edit Existing Validator
 
-```
+```go
 babylond tx checkpointing edit-validator \
 --new-moniker "MONIKER_NAME" \
 --identity "KEYBASE_ID" \
@@ -79,31 +81,31 @@ babylond tx checkpointing edit-validator \
 
 ### Validator Details
 
-```
+```bash
 babylond q staking validator $(babylond keys show wallet --bech val -a)
 ```
 
 ### Validator Unjail
 
-```
+```go
 babylond tx slashing unjail --from wallet --chain-id bbn-test-2 --gas-adjustment 1.5 --gas auto --gas-prices 0.1ubbn -y
 ```
 
 ### Jail Reason
 
-```
+```bash
 babylond query slashing signing-info $(babylond tendermint show-validator)
 ```
 
 ### List All Active Validators
 
-```
+```bash
 babylond q staking validators -oj --limit=3000 | jq '.validators[] | select(.status==BOND_STATUS_BONDED)' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) +  t  + .description.moniker' | sort -gr | nl
 ```
 
 ### List All Inactive Validators
 
-```
+```bash
 babylond q staking validators -oj --limit=3000 | jq '.validators[] | select(.status==BOND_STATUS_UNBONDED)' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) +  t  + .description.moniker' | sort -gr | nl
 ```
 
@@ -111,13 +113,13 @@ babylond q staking validators -oj --limit=3000 | jq '.validators[] | select(.sta
 
 ### Send Token
 
-```
+```go
 babylond tx bank send wallet <TO_WALLET_ADDRESS> 1000000ubbn --from wallet --chain-id bbn-test-2 --gas-adjustment 1.5 --gas auto --gas-prices 0.1ubbn -y
 ```
 
 ### Delegate
 
-```
+```go
 babylond tx epoching delegate <TO_VALOPER_ADDRESS> 1000000ubbn --from wallet --chain-id bbn-test-2 --gas-adjustment 1.5 --gas auto --gas-prices 0.1ubbn -y
 ```
 

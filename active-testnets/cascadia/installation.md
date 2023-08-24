@@ -1,35 +1,40 @@
-
-
-<div align="center"
+# Installation
 
 ![cascadia](https://github.com/Core-Node-Team/Gitbook/assets/108215275/eeb809a7-d806-40ba-ad80-2f9e3d98ba0a)
 
- </div>
+### For automatic installation, enter this command and follow the instructions
 
- 
-## For automatic installation, enter this command and follow the instructions
-```
+```bash
 curl -sSl -o cascadia-kurulum.sh https://raw.githubusercontent.com/Core-Node-Team/Testnet-TR/main/Cascadia/cascadia.sh && chmod +x cascadia-kurulum.sh && bash ./cascadia-kurulum.sh
 ```
-## For manuel installation follow this [guide](manuel-install.md)
 
-## Become A Validator
+### For manuel installation follow this [guide](manuel-install.md)
 
-### Create Keyring
+### Become A Validator
+
+#### Create Keyring
+
 * Don't forget to save the mnemonic
-```
+
+```bash
 cascadiad keys add wallet
 ```
-### Get Funds
-Go to Cascadia [Discord](https://discord.gg/cascadia) and get test tokens from **#faucet** with `$faucet wallet address`
 
-### Check Sync Status
-* Should return ***False***
-```
+#### Get Funds
+
+Go to Cascadia [Discord](https://discord.gg/cascadia) and get test tokens from **#faucet** with `$faucet wallet-address`
+
+#### Check Sync Status
+
+* Should return _<mark style="color:green;">**False**</mark>_
+
+```bash
 cascadiad status 2>&1 | jq .SyncInfo
 ```
-## Create Validator
-```
+
+### Create Validator
+
+```bash
 cascadiad tx staking create-validator \
 --amount 1000000aCC \
 --pubkey $(cascadiad tendermint show-validator) \
@@ -49,19 +54,16 @@ cascadiad tx staking create-validator \
 -y
 ```
 
-### Make sure you see the validator details and check
-```
+#### Make sure you see the validator details and check
+
+```sh
 cascadiad q staking validator $(cascadiad keys show wallet --bech val -a)
 ```
-## Yes, You Are Now A Validator On The Cascadia Network
 
-### Don't Forget to save priv validator key
-```
+### Yes, You Are Now A Validator On The Cascadia Network
+
+#### Don't Forget to save priv validator key
+
+```bash
 cat $HOME/.cascadiad/config/priv_validator_key.json
 ```
-
-
-
-
-
-
