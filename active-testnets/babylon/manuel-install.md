@@ -1,9 +1,11 @@
 # Manuel Installation
 
+## Manuel Installation
+
 ![babylon](https://github.com/Core-Node-Team/Gitbook/assets/108215275/fe72b6b0-bd7b-4c56-b94c-57c7c7e21eac)
 
+## Prepare Server
 
-# Prepare Server
 ```
 sudo apt-get update && sudo apt-get upgrade -y
 
@@ -19,7 +21,8 @@ echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.bash_profile &
 rm -rf go1.20.4.linux-amd64.tar.gz
 ```
 
-# Install Binary
+## Install Binary
+
 ```
 cd /$HOME
 git clone https://github.com/babylonchain/babylon.git
@@ -28,14 +31,17 @@ git checkout v0.7.2
 make install
 ```
 
-# Initalize
+## Initalize
+
 ```
 babylond config chain-id bbn-test-2
 babylond config keyring-backend test
 babylond config node tcp://localhost:31157
 babylond init $MONIKER --chain-id bbn-test-2
 ```
-# Config
+
+## Config
+
 ```
 curl -Ls https://raw.githubusercontent.com/Core-Node-Team/Testnet-TR/main/Babylon/addrbook.json > $HOME/.babylond/config/addrbook.json
 
@@ -62,13 +68,16 @@ sed -i \
 sed -i -e 's|^indexer *=.*|indexer = "null"|' $HOME/.babylond/config/config.toml
 ```
 
-# Download Snapshot
+## Download Snapshot
+
 ```
 sudo apt install liblz4-tool -y
 
 curl -L http://128.140.4.67/CoreNode_Chain_Services/babylon_snapshot.tar.lz4 | tar -I lz4 -xf - -C $HOME/.babylond/data
 ```
-# Create Service
+
+## Create Service
+
 ```
 sudo tee /etc/systemd/system/babylond.service > /dev/null <<EOF
 [Unit]
@@ -87,15 +96,11 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl enable babylond
 ```
-# Start Node And Follow Logs
+
+## Start Node And Follow Logs
+
 ```
 sudo systemctl start babylond && sudo journalctl -u babylond -fo cat
 ```
 
-
-
-
-
-
-
-
+### **Continue to** [**Become A Validator**](installation.md#become-a-validator)
