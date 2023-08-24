@@ -167,7 +167,7 @@ sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTO
 ```
 ## Set Minimum Gas Price
 ```
-
+sed -i 's/minimum-gas-prices =.*/minimum-gas-prices = "0.0uelys"/g' $HOME/.elys/config/app.toml
 ```
 ## Enable Prometheus
 ```
