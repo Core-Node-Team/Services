@@ -20,6 +20,7 @@
 
 * [Elys](active-testnets/Elys/README.md)
   * [Installation](active-testnets/Elys/installation.md)
+    * [Manuel Installation](active-testnets/Elys/manuel-install.md) 
   * [Snapshot](active-testnets/Elys/snapshot.md)
   * [Useful Commands](active-testnets/Elys/commands.md)
 
