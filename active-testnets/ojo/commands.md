@@ -159,7 +159,7 @@ sed -i -e 's|^indexer *=.*|indexer = kv|' $HOME/.ojo/config/config.toml
 ```
 sed -i -e 's|^indexer *=.*|indexer = null|' $HOME/.ojo/config/config.toml
 ```
-## Port Değiştir
+## Change Default Port
 > ### CUSTOM_PORT=312
 ```
 sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}58\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}57\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}60\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}56\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}66\"%" $HOME/.ojo/config/config.toml
@@ -187,7 +187,7 @@ ojod status 2>&1 | jq .SyncInfo
 ```
 ojod status 2>&1 | jq .ValidatorInfo
 ```
-## Node Sattus
+## Node Status
 ```
 ojod status 2>&1 | jq .NodeInfo
 ```
@@ -241,7 +241,10 @@ Check Service Logs
 ```
 sudo journalctl -u ojod -f --no-hostname -o cat
 ```
+
 <h1 align=center> Remove Node </h1>
+
+
 ```
 sudo systemctl stop ojod && sudo systemctl disable ojod && sudo rm /etc/systemd/system/ojod.service && sudo systemctl daemon-reload && rm -rf $HOME/.ojo && rm -rf $HOME/ojo && sudo rm -rf $(which ojod)
 ```
