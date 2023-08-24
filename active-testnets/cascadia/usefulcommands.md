@@ -220,7 +220,7 @@ sed -i -e 's|^indexer *=.*|indexer = kv|' $HOME/.cascadiad/config/config.toml
 sed -i -e 's|^indexer *=.*|indexer = null|' $HOME/.cascadiad/config/config.toml
 ```
 
-### Port Değiştir
+### Change Default Port
 
 > #### CUSTOM\_PORT=119
 
