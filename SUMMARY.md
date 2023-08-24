@@ -13,6 +13,7 @@
     
 * [Cascadia](active-testnets/cascadia/README.md)
   * [Installation](active-testnets/cascadia/installation.md)
+    * [Manuel Installation](active-testnets/cascadia/manuel-install.md)
   * [Snapshot](active-testnets/cascadia/snapshot.md)
   * [Useful Commands](active-testnets/cascadia/usefulcommands.md)
  
