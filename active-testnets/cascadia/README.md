@@ -11,3 +11,4 @@
  * [Docs](https://cascadia.gitbook.io/gitbook/)
  * [Github](https://github.com/CascadiaFoundation)
  * [Telegram](https://t.me/+Tf6pQQSA7IkxNmU5)
+ * [Turkish Telegram](https://t.me/CascadiaTR)
