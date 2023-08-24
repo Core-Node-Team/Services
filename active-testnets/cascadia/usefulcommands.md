@@ -261,7 +261,7 @@ cascadiad status 2>&1 | jq .SyncInfo
 cascadiad status 2>&1 | jq .ValidatorInfo
 ```
 
-### Node Sattus
+### Node Status
 
 ```
 cascadiad status 2>&1 | jq .NodeInfo
