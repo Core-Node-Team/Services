@@ -6,6 +6,7 @@
 
 * [Babylon](active-testnets/babylon/README.md)
   * [Installation](active-testnets/babylon/installation.md)
+    * [Manuel Installation](active-testnets/babylon/manuel-install.md)
   * [Snapshot](active-testnets/babylon/snapshot.md)
   * [Useful Commands](active-testnets/babylon/usefulcommands.md)
  
