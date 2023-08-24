@@ -1,6 +1,8 @@
+# Manuel Installation
+
 ![image](https://github.com/Core-Node-Team/Gitbook/assets/108215275/b4e31f1c-5d7f-4540-b8dc-21988e9272ef)
 
-## Prepare Server
+### Prepare Server
 
 ```
 sudo apt-get update && sudo apt-get upgrade -y
@@ -17,7 +19,7 @@ echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.bash_profile &
 rm -rf go1.20.4.linux-amd64.tar.gz
 ```
 
-## Install Binary
+### Install Binary
 
 ```
 git clone https://github.com/ojo-network/ojo
@@ -26,7 +28,8 @@ git checkout v0.1.2
 make install
 ```
 
-## Initalize And Configuration
+### Initalize And Configuration
+
 ```
 ojod config chain-id ojo-devnet
 ojod config keyring-backend test
@@ -56,7 +59,9 @@ curl -Ls https://rpc.devnet-n0.ojo-devnet.node.ojo.network/genesis > $HOME/.ojo/
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0001uojo"|g' $HOME/.ojo/config/app.toml
 sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.ojo/config/config.toml
 ```
-## Create Service
+
+### Create Service
+
 ```
 sudo tee /etc/systemd/system/ojod.service > /dev/null <<EOF
 [Unit]
@@ -76,39 +81,10 @@ systemctl daemon-reload
 systemctl enable ojod
 ```
 
-## Start Node And Follow Logs
+### Start Node And Follow Logs
+
 ```
 sudo systemctl start ojod && sudo journalctl -u ojod -fo cat
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Continue To [Become A Validator](installation.md#become-a-validator)
