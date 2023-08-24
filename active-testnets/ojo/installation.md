@@ -6,13 +6,13 @@
 </div>
 
 
-### For automatic installation, enter this command and follow the instructions
+## For automatic installation, enter this command and follow the instructions
 ```bash
 curl -sSL -o ojo.sh https://raw.githubusercontent.com/0xSocrates/Testnet-Rehberler/main/Ojo/ojo.sh && chmod +x ojo.sh && bash ./ojo.sh
 ```
-### For manuel installation follow this [guide](manuel-install.md)
+## For manuel installation follow this [guide](manuel-install.md)
 
-### Become A Validator
+## Become A Validator
 
 #### Create Keyring
 
@@ -22,11 +22,11 @@ curl -sSL -o ojo.sh https://raw.githubusercontent.com/0xSocrates/Testnet-Rehberl
 ojod keys add wallet
 ```
 
-#### Get Funds
+### Get Funds
 
 Go to Ojo [Discord](https://discord.gg/cascadia) and ask for test tokens to moderators
 
-#### Check Sync Status
+### Check Sync Status
 
 * Should return _<mark style="color:green;">**False**</mark>_
 
@@ -55,15 +55,15 @@ ojod tx staking create-validator \
 -y
 ```
 
-#### Make sure you see the validator details and check
+### Make sure you see the validator details and check
 
 ```bash
 ojod q staking validator $(ojod keys show wallet --bech val -a)
 ```
 
-### Yes, You Are Now A Validator On The Ojo Network
+## Yes, You Are Now A Validator On The Ojo Network
 
-#### Don't Forget to save priv validator key
+### Don't Forget to save priv validator key
 
 ```bash
 cat $HOME/.ojo/config/priv_validator_key.json
