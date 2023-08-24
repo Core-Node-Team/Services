@@ -1,6 +1,6 @@
 # Manuel Installation
 
-## Manuel Installation
+
 
 ![babylon](https://github.com/Core-Node-Team/Gitbook/assets/108215275/fe72b6b0-bd7b-4c56-b94c-57c7c7e21eac)
 

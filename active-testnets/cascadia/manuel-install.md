@@ -1,7 +1,8 @@
+# Manuel Installation
 
-![cascadialogo](https://github.com/Core-Node-Team/Gitbook/assets/108215275/da94933d-4d38-430f-bd91-7d06f68e5e72)
+![cascadia](https://github.com/Core-Node-Team/Gitbook/assets/108215275/da94933d-4d38-430f-bd91-7d06f68e5e72)
 
-## Prepare Server
+### Prepare Server
 
 ```
 sudo apt-get update && sudo apt-get upgrade -y
@@ -19,7 +20,8 @@ echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.bash_profile &
 rm -rf go1.20.4.linux-amd64.tar.gz
 ```
 
-## Install Binary
+### Install Binary
+
 ```
 cd /$HOME
 curl -L https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.4/cascadiad -o cascadiad
@@ -27,14 +29,18 @@ chmod +x cascadiad
 sudo cp cascadiad /usr/local/bin/cascadiad
 rm -rf cascadiad
 ```
-## Initalize
+
+### Initalize
+
 ```
 cascadiad config chain-id cascadia_6102-1
 cascadiad config keyring-backend test
 cascadiad config node tcp://localhost:11957
 cascadiad init $MONIKER --chain-id cascadia_6102-1
 ```
-## Config
+
+### Config
+
 ```
 curl -Ls https://raw.githubusercontent.com/0xSocrates/Testnet-Rehberler/main/Cascadia/addrbook.json > $HOME/.cascadiad/config/addrbook.json
 curl -Ls https://raw.githubusercontent.com/0xSocrates/Testnet-Rehberler/main/Cascadia/genesis.json > $HOME/.cascadiad/config/genesis.json
@@ -58,15 +64,16 @@ sed -i \
 
 sed -i -e 's|^indexer *=.*|indexer = "null"|' $HOME/.cascadiad/config/config.toml
 ```
-## Download Snapshot
+
+### Download Snapshot
+
 ```
 sudo apt install liblz4-tool -y
 curl -L http://128.140.4.67/CoreNode_Chain_Services/cascadia_snapshot.tar.lz4 | tar -I lz4 -xf - -C $HOME/.cascadiad/data
 ```
 
+### Create Service
 
-
-## Create Service
 ```
 sudo tee /etc/systemd/system/cascadiad.service > /dev/null <<EOF
 [Unit]
@@ -85,9 +92,11 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl enable cascadiad
 ```
-## Start Node And Foolow Logs
+
+### Start Node And Foolow Logs
+
 ```
 sudo systemctl start cascadiad && sudo journalctl -u cascadiad -fo cat
 ```
 
-
+### **Continue To** [**Become A Validator**](installation.md#become-a-validator)

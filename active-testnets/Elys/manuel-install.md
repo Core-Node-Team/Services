@@ -1,11 +1,10 @@
-
-## Manuel Installation
-
-![ZRS8VQyT_400x400](https://github.com/Core-Node-Team/Gitbook/assets/108215275/41c4a299-4ad1-4ac4-bcc3-367904fb10fb)
+# Manuel Installation
 
 
 
-## Prepare Server
+![elys](https://github.com/Core-Node-Team/Gitbook/assets/108215275/41c4a299-4ad1-4ac4-bcc3-367904fb10fb)
+
+### Prepare Server
 
 ```bash
 sudo apt-get update && sudo apt-get upgrade -y
@@ -22,7 +21,7 @@ echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.bash_profile &
 rm -rf go1.20.4.linux-amd64.tar.gz
 ```
 
-## Install Binary
+### Install Binary
 
 ```bash
 git clone https://github.com/elys-network/elys.git
@@ -31,14 +30,17 @@ git checkout v0.9.0
 make install
 ```
 
-## Initalize
+### Initalize
+
 ```
 elysd config chain-id elystestnet-1
 elysd config keyring-backend test
 elysd config node tcp://localhost:31357
 elysd init <MONIKER> --chain-id elystestnet-1
 ```
-## Config
+
+### Config
+
 ```
 curl -Ls https://raw.githubusercontent.com/Core-Node-Team/Testnet-TR/main/Elys/addrbook.json > $HOME/.elys/config/addrbook.json
 curl -Ls https://raw.githubusercontent.com/Core-Node-Team/Testnet-TR/main/Elys/genesis.json > $HOME/.elys/config/genesis.json
@@ -65,14 +67,15 @@ sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${Custo
 sed -i -e "s%^address = \"tcp://localhost:1317\"%address = \"tcp://localhost:${CustomPort}17\"%; s%^address = \":8080\"%address = \":${CustomPort}80\"%; s%^address = \"localhost:9090\"%address = \"localhost:${CustomPort}90\"%; s%^address = \"localhost:9091\"%address = \"localhost:${CustomPort}91\"%; s%:8545%:${CustomPort}45%; s%:8546%:${CustomPort}46%; s%:6065%:${CustomPort}65%" $HOME/$DirectName/config/app.toml
 ```
 
-## Download Snapshot
+### Download Snapshot
 
 ```
 sudo apt install liblz4-tool -y
 
 curl -L http://202.61.243.24/CoreNode_ChainServices/elys_snapshot.tar.lz4 | tar -I lz4 -xf - -C $HOME/.elys/data
 ```
-## Create Service
+
+### Create Service
 
 ```
 sudo tee /etc/systemd/system/elysd.service > /dev/null <<EOF
@@ -92,10 +95,11 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl enable elysd
 ```
-## Start Node And Follow Logs
+
+### Start Node And Follow Logs
 
 ```
 sudo systemctl start elysd && sudo journalctl -u elysd -fo cat
 ```
 
-
+### Continue To [Become A Validator](installation.md#become-a-validator)
