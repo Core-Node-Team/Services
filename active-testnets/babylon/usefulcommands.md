@@ -222,7 +222,7 @@ sed -i -e 's|^indexer *=.*|indexer = kv|' $HOME/.babylond/config/config.toml
 sed -i -e 's|^indexer *=.*|indexer = null|' $HOME/.babylond/config/config.toml
 ```
 
-### Port Değiştir
+### Change Default Port
 
 > #### CUSTOM\_PORT=311
 
@@ -344,6 +344,7 @@ sudo journalctl -u babylond -f --no-hostname -o cat
 ```
 
 ## Remove Node
+
 
 ```
 sudo systemctl stop babylond && sudo systemctl disable babylond && sudo rm /etc/systemd/system/babylond.service && sudo systemctl daemon-reload && rm -rf $HOME/.babylond && rm -rf $HOME/babylon && sudo rm -rf $(which babylond)
