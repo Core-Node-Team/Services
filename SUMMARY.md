@@ -27,5 +27,6 @@
  
 * [Ojo](active-testnets/ojo/README.md)
   * [Installation](active-testnets/ojo/installation.md)
+    * [Manuel Installation](active-testnets/ojo/manuel-install.md)
   * [Snapshot](active-testnets/ojo/snapshot.md)
   * [Useful Commands](active-testnets/ojo/commands.md)
