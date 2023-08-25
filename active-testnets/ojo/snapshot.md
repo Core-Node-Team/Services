@@ -1,5 +1,3 @@
-```
-stop
-download
-restart
+```bash
+coming soon
 ```
