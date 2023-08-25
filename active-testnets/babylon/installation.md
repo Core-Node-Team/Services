@@ -4,6 +4,7 @@
 
 <table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Latest Version</th><th align="center">Custom Port</th></tr></thead><tbody><tr><td align="center"><mark style="color:orange;">bbn-test-2</mark></td><td align="center"><mark style="color:green;">v0.7.2</mark></td><td align="center"><mark style="color:yellow;">311</mark></td></tr></tbody></table>
 
+> ## Hardware Requirements
 <table data-header-hidden data-full-width="false"><thead><tr><th width="247">Hardware Requirements</th><th></th></tr></thead><tbody><tr><td>Minimum</td><td>3CPU 4RAM 80GB</td></tr><tr><td>Recommended</td><td>4CPU 8RAM 160GB</td></tr></tbody></table>
 
 ## For automatic installation, enter this command and follow the instructions
