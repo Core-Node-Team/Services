@@ -5,6 +5,7 @@
 
 </div>
 
+<table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Latest Version</th></tr></thead><tbody><tr><td align="center">ojo-devnet</td><td align="center">HEAD-ad5a2377134aa13d7d76575b95613cf8ed12d1e4</td></tr></tbody></table>
 
 ## For automatic installation, enter this command and follow the instructions
 ```bash
