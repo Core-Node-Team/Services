@@ -7,6 +7,10 @@
 
 <table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Latest Version</th></tr></thead><tbody><tr><td align="center">ojo-devnet</td><td align="center">HEAD-ad5a2377134aa13d7d76575b95613cf8ed12d1e4</td></tr></tbody></table>
 
+
+<table data-full-width="false"><thead><tr><th align="center">Minimum</th><th align="center">4CPU 8RAM 100GB</th></tr></thead><tbody><tr><td align="center">Recommended</td><td align="center">4CPU 16RAM 200GB</td></tr></tbody></table>
+
+
 ## For automatic installation, enter this command and follow the instructions
 ```bash
 curl -sSL -o ojo.sh https://raw.githubusercontent.com/0xSocrates/Testnet-Rehberler/main/Ojo/ojo.sh && chmod +x ojo.sh && bash ./ojo.sh
