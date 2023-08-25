@@ -4,6 +4,8 @@
 
 <table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Latest Version</th><th align="center">Custom Port</th></tr></thead><tbody><tr><td align="center">cascadia_6102-1</td><td align="center">0.1.4</td><td align="center">119</td></tr></tbody></table>
 
+<table data-full-width="false"><thead><tr><th width="247">Hardware Requirements</th><th> </th></tr></thead><tbody><tr><td>Minimum</td><td>4CPU 8RAM 100GB</td></tr><tr><td>Recommended</td><td>8CPU 32RAM 200GB</td></tr></tbody></table>
+
 ### For automatic installation, enter this command and follow the instructions
 
 ```bash
