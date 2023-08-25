@@ -2,6 +2,9 @@
 
 ![cascadia](https://github.com/Core-Node-Team/Gitbook/assets/108215275/eeb809a7-d806-40ba-ad80-2f9e3d98ba0a)
 
+
+<table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Latest Version</th></tr></thead><tbody><tr><td align="center">cascadia_6102-1</td><td align="center">0.1.4</td></tr></tbody></table>
+
 ### For automatic installation, enter this command and follow the instructions
 
 ```bash
