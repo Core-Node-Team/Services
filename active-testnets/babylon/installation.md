@@ -2,6 +2,10 @@
 
 ![babylon](https://github.com/Core-Node-Team/Gitbook/assets/108215275/fe72b6b0-bd7b-4c56-b94c-57c7c7e21eac)
 
+| Chain-ID | Latest Version |
+| ------------- | --------- |
+| bbn-test-2 | v0.7.2 |
+
 ## For automatic installation, enter this command and follow the instructions
 
 ```bash
