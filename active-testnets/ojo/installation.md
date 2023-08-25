@@ -2,9 +2,9 @@
 
 ![ojo](https://github.com/Core-Node-Team/Gitbook/assets/108215275/22d4b0aa-b9a6-4c87-9ed6-5278c0f7a13f)
 
-<table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Latest Version</th><th align="center">Custom Port</th></tr></thead><tbody><tr><td align="center">ojo-devnet</td><td align="center">HEAD-ad5a2377134aa13d7d76575b95613cf8ed12d1e4</td><td align="center">312</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Latest Version</th><th align="center">Custom Port</th></tr></thead><tbody><tr><td align="center"><mark style="color:orange;">ojo-devnet</mark></td><td align="center"><mark style="color:green;">HEAD-ad5a2377134aa13d7d76575b95613cf8ed12d1e4</mark></td><td align="center"><mark style="color:yellow;">312</mark></td></tr></tbody></table>
 
-<table data-full-width="false"><thead><tr><th width="247">Hardware Requirements</th><th> </th></tr></thead><tbody><tr><td>Minimum</td><td>4CPU 8RAM 100GB</td></tr><tr><td>Recommended</td><td>4CPU 16RAM 200GB</td></tr></tbody></table>
+<table data-header-hidden data-full-width="false"><thead><tr><th width="247">Hardware Requirements</th><th> </th></tr></thead><tbody><tr><td>Minimum</td><td>4CPU 8RAM 100GB</td></tr><tr><td>Recommended</td><td>4CPU 16RAM 200GB</td></tr></tbody></table>
 
 ### For automatic installation, enter this command and follow the instructions
 
@@ -64,7 +64,7 @@ ojod tx staking create-validator \
 ojod q staking validator $(ojod keys show wallet --bech val -a)
 ```
 
-### Yes, You Are Now A Validator On The Ojo Network
+### <mark style="color:purple;">Yes, You Are Now A Validator On The Ojo Network</mark>
 
 #### Don't Forget to save priv validator key
 

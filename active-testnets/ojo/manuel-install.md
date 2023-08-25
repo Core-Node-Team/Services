@@ -4,7 +4,7 @@
 
 ### Prepare Server
 
-```
+```bash
 sudo apt-get update && sudo apt-get upgrade -y
 
 sudo apt install curl tar wget tmux htop net-tools clang pkg-config libssl-dev jq build-essential git screen make ncdu -y
@@ -21,7 +21,7 @@ rm -rf go1.20.4.linux-amd64.tar.gz
 
 ### Install Binary
 
-```
+```bash
 git clone https://github.com/ojo-network/ojo
 cd ojo
 git checkout v0.1.2
@@ -30,7 +30,7 @@ make install
 
 ### Initalize And Configuration
 
-```
+```bash
 ojod config chain-id ojo-devnet
 ojod config keyring-backend test
 ojod config node tcp://localhost:31257
@@ -62,7 +62,7 @@ sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.ojo/config/config.toml
 
 ### Create Service
 
-```
+```bash
 sudo tee /etc/systemd/system/ojod.service > /dev/null <<EOF
 [Unit]
 Description=Ojo Node
@@ -83,7 +83,7 @@ systemctl enable ojod
 
 ### Start Node And Follow Logs
 
-```
+```bash
 sudo systemctl start ojod && sudo journalctl -u ojod -fo cat
 ```
 

@@ -32,7 +32,7 @@ make install
 
 ### Initalize
 
-```
+```bash
 elysd config chain-id elystestnet-1
 elysd config keyring-backend test
 elysd config node tcp://localhost:31357
@@ -41,7 +41,7 @@ elysd init <MONIKER> --chain-id elystestnet-1
 
 ### Config
 
-```
+```bash
 curl -Ls https://raw.githubusercontent.com/Core-Node-Team/Testnet-TR/main/Elys/addrbook.json > $HOME/.elys/config/addrbook.json
 curl -Ls https://raw.githubusercontent.com/Core-Node-Team/Testnet-TR/main/Elys/genesis.json > $HOME/.elys/config/genesis.json
 peers="258f523c96efde50d5fe0a9faeea8a3e83be22ca@seed.elystestnet-1.elys.aviaone.com:20273"
@@ -69,7 +69,7 @@ sed -i -e "s%^address = \"tcp://localhost:1317\"%address = \"tcp://localhost:${C
 
 ### Download Snapshot
 
-```
+```bash
 sudo apt install liblz4-tool -y
 
 curl -L http://202.61.243.24/CoreNode_ChainServices/elys_snapshot.tar.lz4 | tar -I lz4 -xf - -C $HOME/.elys/data
@@ -77,7 +77,7 @@ curl -L http://202.61.243.24/CoreNode_ChainServices/elys_snapshot.tar.lz4 | tar 
 
 ### Create Service
 
-```
+```bash
 sudo tee /etc/systemd/system/elysd.service > /dev/null <<EOF
 [Unit]
 Description=Elys Node
@@ -98,7 +98,7 @@ sudo systemctl enable elysd
 
 ### Start Node And Follow Logs
 
-```
+```bash
 sudo systemctl start elysd && sudo journalctl -u elysd -fo cat
 ```
 

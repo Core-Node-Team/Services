@@ -4,7 +4,7 @@
 
 ### Prepare Server
 
-```
+```bash
 sudo apt-get update && sudo apt-get upgrade -y
 
 sudo apt install curl tar wget tmux htop net-tools clang pkg-config libssl-dev jq build-essential git screen make ncdu -y
@@ -22,7 +22,7 @@ rm -rf go1.20.4.linux-amd64.tar.gz
 
 ### Install Binary
 
-```
+```bash
 cd /$HOME
 curl -L https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.4/cascadiad -o cascadiad
 chmod +x cascadiad
@@ -32,7 +32,7 @@ rm -rf cascadiad
 
 ### Initalize
 
-```
+```bash
 cascadiad config chain-id cascadia_6102-1
 cascadiad config keyring-backend test
 cascadiad config node tcp://localhost:11957
@@ -41,7 +41,7 @@ cascadiad init $MONIKER --chain-id cascadia_6102-1
 
 ### Config
 
-```
+```bash
 curl -Ls https://raw.githubusercontent.com/0xSocrates/Testnet-Rehberler/main/Cascadia/addrbook.json > $HOME/.cascadiad/config/addrbook.json
 curl -Ls https://raw.githubusercontent.com/0xSocrates/Testnet-Rehberler/main/Cascadia/genesis.json > $HOME/.cascadiad/config/genesis.json
 sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0025aCC\"/" ~/.cascadiad/config/app.toml
@@ -67,14 +67,14 @@ sed -i -e 's|^indexer *=.*|indexer = "null"|' $HOME/.cascadiad/config/config.tom
 
 ### Download Snapshot
 
-```
+```bash
 sudo apt install liblz4-tool -y
 curl -L http://128.140.4.67/CoreNode_Chain_Services/cascadia_snapshot.tar.lz4 | tar -I lz4 -xf - -C $HOME/.cascadiad/data
 ```
 
 ### Create Service
 
-```
+```bash
 sudo tee /etc/systemd/system/cascadiad.service > /dev/null <<EOF
 [Unit]
 Description=Cascadia Node
@@ -95,7 +95,7 @@ sudo systemctl enable cascadiad
 
 ### Start Node And Foolow Logs
 
-```
+```bash
 sudo systemctl start cascadiad && sudo journalctl -u cascadiad -fo cat
 ```
 

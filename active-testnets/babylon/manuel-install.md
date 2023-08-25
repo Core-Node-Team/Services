@@ -6,7 +6,7 @@
 
 ## Prepare Server
 
-```
+```bash
 sudo apt-get update && sudo apt-get upgrade -y
 
 sudo apt install curl tar wget tmux htop net-tools clang pkg-config libssl-dev jq build-essential git screen make ncdu -y
@@ -23,7 +23,7 @@ rm -rf go1.20.4.linux-amd64.tar.gz
 
 ## Install Binary
 
-```
+```bash
 cd /$HOME
 git clone https://github.com/babylonchain/babylon.git
 cd babylon
@@ -33,7 +33,7 @@ make install
 
 ## Initalize
 
-```
+```bash
 babylond config chain-id bbn-test-2
 babylond config keyring-backend test
 babylond config node tcp://localhost:31157
@@ -42,7 +42,7 @@ babylond init $MONIKER --chain-id bbn-test-2
 
 ## Config
 
-```
+```bash
 curl -Ls https://raw.githubusercontent.com/Core-Node-Team/Testnet-TR/main/Babylon/addrbook.json > $HOME/.babylond/config/addrbook.json
 
 curl -Ls https://raw.githubusercontent.com/Core-Node-Team/Testnet-TR/main/Babylon/genesis.json > $HOME/.babylond/config/genesis.json
@@ -70,7 +70,7 @@ sed -i -e 's|^indexer *=.*|indexer = "null"|' $HOME/.babylond/config/config.toml
 
 ## Download Snapshot
 
-```
+```bash
 sudo apt install liblz4-tool -y
 
 curl -L http://128.140.4.67/CoreNode_Chain_Services/babylon_snapshot.tar.lz4 | tar -I lz4 -xf - -C $HOME/.babylond/data
@@ -78,7 +78,7 @@ curl -L http://128.140.4.67/CoreNode_Chain_Services/babylon_snapshot.tar.lz4 | t
 
 ## Create Service
 
-```
+```bash
 sudo tee /etc/systemd/system/babylond.service > /dev/null <<EOF
 [Unit]
 Description=Babylon Node
@@ -99,7 +99,7 @@ sudo systemctl enable babylond
 
 ## Start Node And Follow Logs
 
-```
+```bash
 sudo systemctl start babylond && sudo journalctl -u babylond -fo cat
 ```
 

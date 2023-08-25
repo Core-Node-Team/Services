@@ -2,10 +2,9 @@
 
 ![babylon](https://github.com/Core-Node-Team/Gitbook/assets/108215275/fe72b6b0-bd7b-4c56-b94c-57c7c7e21eac)
 
-<table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Latest Version</th><th align="center">Custom Port</th></tr></thead><tbody><tr><td align="center">bbn-test-2</td><td align="center">v0.7.2</td><td align="center">311</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Latest Version</th><th align="center">Custom Port</th></tr></thead><tbody><tr><td align="center"><mark style="color:orange;">bbn-test-2</mark></td><td align="center"><mark style="color:green;">v0.7.2</mark></td><td align="center"><mark style="color:yellow;">311</mark></td></tr></tbody></table>
 
-
-<table data-full-width="false"><thead><tr><th width="247">Hardware Requirements</th><th> </th></tr></thead><tbody><tr><td>Minimum</td><td>3CPU 4RAM 80GB</td></tr><tr><td>Recommended</td><td>4CPU 8RAM 160GB</td></tr></tbody></table>
+<table data-header-hidden data-full-width="false"><thead><tr><th width="247">Hardware Requirements</th><th></th></tr></thead><tbody><tr><td>Minimum</td><td>3CPU 4RAM 80GB</td></tr><tr><td>Recommended</td><td>4CPU 8RAM 160GB</td></tr></tbody></table>
 
 ## For automatic installation, enter this command and follow the instructions
 
@@ -85,7 +84,7 @@ babylond tx checkpointing create-validator \
 babylond q staking validator $(babylond keys show wallet --bech val -a)
 ```
 
-## Yes, You Are Now A Validator On The Babylon Network
+## <mark style="color:purple;">Yes, You Are Now A Validator On The Babylon Network</mark>
 
 ### Don't Forget to save priv validator key
 

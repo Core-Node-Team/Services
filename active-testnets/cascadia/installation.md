@@ -2,9 +2,9 @@
 
 ![cascadia](https://github.com/Core-Node-Team/Gitbook/assets/108215275/eeb809a7-d806-40ba-ad80-2f9e3d98ba0a)
 
-<table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Latest Version</th><th align="center">Custom Port</th></tr></thead><tbody><tr><td align="center">cascadia_6102-1</td><td align="center">0.1.4</td><td align="center">119</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Latest Version</th><th align="center">Custom Port</th></tr></thead><tbody><tr><td align="center"><mark style="color:orange;">cascadia_6102-1</mark></td><td align="center"><mark style="color:green;">0.1.4</mark></td><td align="center"><mark style="color:yellow;">119</mark></td></tr></tbody></table>
 
-<table data-full-width="false"><thead><tr><th width="247">Hardware Requirements</th><th> </th></tr></thead><tbody><tr><td>Minimum</td><td>4CPU 8RAM 100GB</td></tr><tr><td>Recommended</td><td>8CPU 32RAM 200GB</td></tr></tbody></table>
+<table data-header-hidden data-full-width="false"><thead><tr><th width="247">Hardware Requirements</th><th> </th></tr></thead><tbody><tr><td>Minimum</td><td>4CPU 8RAM 100GB</td></tr><tr><td>Recommended</td><td>8CPU 32RAM 200GB</td></tr></tbody></table>
 
 ### For automatic installation, enter this command and follow the instructions
 
@@ -64,7 +64,7 @@ cascadiad tx staking create-validator \
 cascadiad q staking validator $(cascadiad keys show wallet --bech val -a)
 ```
 
-### Yes, You Are Now A Validator On The Cascadia Network
+### <mark style="color:purple;">Yes, You Are Now A Validator On The Cascadia Network</mark>
 
 #### Don't Forget to save priv validator key
 
