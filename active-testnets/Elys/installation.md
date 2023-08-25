@@ -1,20 +1,20 @@
+# Installation
 
 ![elys](https://github.com/Core-Node-Team/Gitbook/assets/108215275/8bbc6205-2aaf-47e5-851e-c1b037faa66f)
 
-<table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Latest Version</th></tr></thead><tbody><tr><td align="center">elystestnet-1</td><td align="center">v0.9.0</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Latest Version</th><th align="center">Custom Port</th></tr></thead><tbody><tr><td align="center">elystestnet-1</td><td align="center">v0.9.0</td><td align="center">313</td></tr></tbody></table>
 
-## For automatic installation, enter this command and follow the instructions
+### For automatic installation, enter this command and follow the instructions
 
 ```
 curl -sSL -o elys_install.sh https://raw.githubusercontent.com/Core-Node-Team/Testnet-Guides/main/Elys/elys_install.sh && chmod +x elys_install.sh && bash ./elys_install.sh && source $HOME/.bash_profile
 ```
 
+### For manuel installation follow this [guide](manuel-install.md)
 
-## For manuel installation follow this [guide](manuel-install.md)
+### Become A Validator
 
-## Become A Validator
-
-### Create Keyring
+#### Create Keyring
 
 * Don't forget to save the mnemonic
 
@@ -22,7 +22,7 @@ curl -sSL -o elys_install.sh https://raw.githubusercontent.com/Core-Node-Team/Te
 elysd keys add wallet
 ```
 
-### Check Sync Status
+#### Check Sync Status
 
 * Should return _<mark style="color:green;">**False**</mark>_
 
@@ -30,7 +30,7 @@ elysd keys add wallet
 elysd status 2>&1 | jq .SyncInfo
 ```
 
-## Create Validator
+### Create Validator
 
 ```go
 elysd tx staking create-validator \
@@ -52,15 +52,15 @@ elysd tx staking create-validator \
 -y
 ```
 
-### Make sure you see the validator details and check
+#### Make sure you see the validator details and check
 
 ```bash
 elysd q staking validator $(elysd keys show wallet --bech val -a)
 ```
 
-## Yes, You Are Now A Validator On The Elys Network
+### Yes, You Are Now A Validator On The Elys Network
 
-### Don't Forget to save priv validator key
+#### Don't Forget to save priv validator key
 
 ```bash
 cat $HOME/.elys/config/priv_validator_key.json

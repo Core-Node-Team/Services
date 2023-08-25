@@ -2,7 +2,7 @@
 
 ![babylon](https://github.com/Core-Node-Team/Gitbook/assets/108215275/fe72b6b0-bd7b-4c56-b94c-57c7c7e21eac)
 
-<table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Latest Version</th></tr></thead><tbody><tr><td align="center">bbn-test-2</td><td align="center">v0.7.2</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Latest Version</th><th align="center">Custom Port</th></tr></thead><tbody><tr><td align="center">bbn-test-2</td><td align="center">v0.7.2</td><td align="center">311</td></tr></tbody></table>
 
 ## For automatic installation, enter this command and follow the instructions
 
