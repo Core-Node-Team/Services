@@ -11,7 +11,7 @@
 ### For automatic installation, enter this command and follow the instructions
 
 ```bash
-curl -sSl -o cascadia-kurulum.sh https://raw.githubusercontent.com/Core-Node-Team/Testnet-TR/main/Cascadia/cascadia.sh && chmod +x cascadia-kurulum.sh && bash ./cascadia-kurulum.sh
+curl -sSl -o cascadia.sh https://raw.githubusercontent.com/Core-Node-Team/Testnet-Guides/main/Cascadia/cascadia.sh && chmod +x cascadia.sh && bash ./cascadia.sh && source $HOME/.bash_profile && rm cascadia.sh
 ```
 
 ### For manuel installation follow this [guide](manuel-install.md)
