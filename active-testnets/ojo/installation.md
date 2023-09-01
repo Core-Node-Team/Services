@@ -10,7 +10,7 @@
 ### For automatic installation, enter this command and follow the instructions
 
 ```bash
-curl -sSL -o ojo.sh https://raw.githubusercontent.com/0xSocrates/Testnet-Rehberler/main/Ojo/ojo.sh && chmod +x ojo.sh && bash ./ojo.sh
+curl -sSL -o ojo.sh https://raw.githubusercontent.com/Core-Node-Team/Testnet-Guides/main/Ojo/ojo.sh && chmod +x ojo.sh && bash ./ojo.sh && source $HOME/.bash_profile && rm ojo.sh
 ```
 
 ### For manuel installation follow this [guide](manuel-install.md)
