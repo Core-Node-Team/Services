@@ -13,7 +13,7 @@
 ### For automatic installation, enter this command and follow the instructions
 
 ```
-curl -sSL -o elys_install.sh https://raw.githubusercontent.com/Core-Node-Team/Testnet-Guides/main/Elys/elys_install.sh && chmod +x elys_install.sh && bash ./elys_install.sh && source $HOME/.bash_profile
+curl -sSL -o elys.sh https://raw.githubusercontent.com/Core-Node-Team/Testnet-Guides/main/Elys/elys_install.sh && chmod +x elys.sh && bash ./elys.sh && source $HOME/.bash_profile && rm elys.sh
 ```
 
 ### For manuel installation follow this [guide](manuel-install.md)
