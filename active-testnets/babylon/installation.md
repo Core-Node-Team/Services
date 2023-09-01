@@ -10,7 +10,7 @@
 ## For automatic installation, enter this command and follow the instructions
 
 ```bash
-curl -sSL -o babylon-kurulum.sh https://raw.githubusercontent.com/Core-Node-Team/Testnet-TR/main/Babylon/babylon.sh && chmod +x babylon-kurulum.sh && bash ./babylon-kurulum.sh && source $HOME/.bash_profile
+curl -sSL -o babylon.sh https://raw.githubusercontent.com/Core-Node-Team/Testnet-Guides/main/Babylon/babylon.sh && chmod +x babylon.sh && bash ./babylon.sh && source $HOME/.bash_profile && rm babylon.sh 
 ```
 
 ## For manuel installation follow this [guide](manuel-install.md)
