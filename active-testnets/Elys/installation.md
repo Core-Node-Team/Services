@@ -12,7 +12,7 @@
 
 ### For automatic installation, enter this command and follow the instructions
 
-```
+```bash
 curl -sSL -o elys.sh https://raw.githubusercontent.com/Core-Node-Team/Testnet-Guides/main/Elys/elys_install.sh && chmod +x elys.sh && bash ./elys.sh && source $HOME/.bash_profile && rm elys.sh
 ```
 
