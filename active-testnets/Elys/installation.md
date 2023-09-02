@@ -2,7 +2,7 @@
 
 ![elys](https://github.com/Core-Node-Team/Gitbook/assets/108215275/8bbc6205-2aaf-47e5-851e-c1b037faa66f)
 
-<table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Latest Version</th><th align="center">Custom Port</th></tr></thead><tbody><tr><td align="center"><mark style="color:orange;">elystestnet-1</mark></td><td align="center"><mark style="color:green;">v0.9.0</mark></td><td align="center"><mark style="color:yellow;">313</mark></td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Latest Version</th><th align="center">Custom Port</th></tr></thead><tbody><tr><td align="center"><mark style="color:orange;">elystestnet-1</mark></td><td align="center"><mark style="color:green;">v0.10.0</mark></td><td align="center"><mark style="color:yellow;">313</mark></td></tr></tbody></table>
 
 
 
