@@ -26,7 +26,7 @@ rm -rf go1.20.4.linux-amd64.tar.gz
 ```bash
 git clone https://github.com/elys-network/elys.git
 cd elys
-git checkout v0.9.0
+git checkout v0.10.0
 make install
 ```
 
