@@ -1,6 +1,6 @@
-# Mina Testworld Mission 2.0
+# Mina Testworld-2
 
-![image](https://github.com/Core-Node-Team/Gitbook/assets/108215275/4bf75750-e5e7-4513-80ab-63f932ba4031)
+![testworld-mission-2.0](https://github.com/Core-Node-Team/Gitbook/assets/108215275/4bf75750-e5e7-4513-80ab-63f932ba4031)
 
 ## Mina is an L1 blockchain based on zero-knowledge proofs (ZKP) with smart contracts written in TypeScript. It is the first cryptocurrency protocol with a succinct blockchain (22KB).
 
@@ -14,4 +14,4 @@ The Program gathers experienced node operators to provide the network backbone f
 * [Docs](https://docs.minaprotocol.com/)
 * [Github](https://github.com/MinaProtocol)
 * [Telegram](https://t.me/minaprotocol)
-* [Turkish Telegram](https://t.me/Mina_Turkiye)
+* [Turkish Telegram](https://t.me/Mina\_Turkiye)
