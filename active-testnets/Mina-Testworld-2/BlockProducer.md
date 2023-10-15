@@ -1,10 +1,9 @@
+# Block Producer
 
+![mina](https://github.com/Core-Node-Team/Gitbook/assets/108215275/e217d9a0-f76e-47b5-b6a3-ece47ef94d5d)
 
-
-![JM4_vQ34_400x400](https://github.com/Core-Node-Team/Gitbook/assets/108215275/e217d9a0-f76e-47b5-b6a3-ece47ef94d5d)
-
-| CPU |	Memory | Storage | Network |
-| ----| ------- | ------- | -------- |
+| CPU              | Memory    | Storage            | Network                    |
+| ---------------- | --------- | ------------------ | -------------------------- |
 | 8 core processor | 16 GB RAM | 10 GB free storage | 1 Mbps internet connection |
 
 ```
@@ -12,52 +11,63 @@ sudo rm /etc/apt/sources.list.d/mina*.list
 echo "deb [trusted=yes] http://packages.o1test.net/ focal rampup" | sudo tee /etc/apt/sources.list.d/mina-rampup.list
 sudo apt-get update
 ```
+
 ```
 sudo apt-get install -y mina-berkeley=2.0.0rampup5-55b7818
 ```
 
-
-
 * Download the zip file from the e-mail to your PC and open it hebelehübele.zip
-* We create a keys file on the server ~/keys .
+* We create a keys file on the server \~/keys .
+
 ```
 mkdir ~/keys
 ```
-*	We edit the authority of the file
+
+* We edit the authority of the file
+
 ```
 chmod 700 ~/keys
 ```
+
 * We organize the inside of my-wallet with Nano
+
 ```
 nano ~/keys/my-wallet
 ```
+
 * We copy the contents of community-216-key. Open the file you downloaded with a text document
-*	ctrl x +y enter
-*	Let's edit the authorization of the wallet file
+* ctrl x +y enter
+* Let's edit the authorization of the wallet file
+
 ```
 chmod 600 ~/keys/my-wallet
 ```
-*	 We edit the my-wallet.pub file with nano, then we download it to our PC and copy the contents of community-216.pub in the file we opened and save it with ctrl x y.
+
+* We edit the my-wallet.pub file with nano, then we download it to our PC and copy the contents of community-216.pub in the file we opened and save it with ctrl x y.
+
 ```
 nano ~/keys/my-wallet.pub
 ```
-### Manuel setup
 
+#### Manuel setup
 
+Not: You can find the password for your new wallet in the community-216-password.txt file you extracted. You will write this password below where it says `MINA_PRIVKEY_PASS="password"`. Save with ctrl x y enter.
 
-Not: You can find the password for your new wallet in the community-216-password.txt file you extracted. You will write this password below where it says `MINA_PRIVKEY_PASS="password"`. Save with ctrl x y enter. 
-* You will write the password you created with the codes below `MINA_LIBP2P_PASS="password" here. So, when you enter the code, it will ask for a password, for example, you said 12345678, you will write it here `MINA_LIBP2P_PASS="password"`, now whatever password you put.
-* UPTIME_PRIVKEY_PASS="password" here, write the password you wrote here MINA_PRIVKEY_PASS="password"
+* You will write the password you created with the codes below `MINA_LIBP2P_PASS="password" here. So, when you enter the code, it will ask for a password, for example, you said 12345678, you will write it here` MINA\_LIBP2P\_PASS="password"\`, now whatever password you put.
+* UPTIME\_PRIVKEY\_PASS="password" here, write the password you wrote here MINA\_PRIVKEY\_PASS="password"
 
 ```
 mina libp2p generate-keypair -privkey-path /root/keys/keys
 ```
----------------
+
+***
+
 ```
 nano ~/.mina-env
 ```
 
-* After saying nano ~/.mina-env, copy the code below and paste it into it. Thank you, correct the corrections at the end. 
+* After saying nano \~/.mina-env, copy the code below and paste it into it. Thank you, correct the corrections at the end.
+
 ```
 MINA_PRIVKEY_PASS="şifre"
 UPTIME_PRIVKEY_PASS="şifre"
@@ -65,11 +75,13 @@ EXTRA_FLAGS="--log-json --log-snark-work-gossip true --internal-tracing --insecu
 RAYON_NUM_THREADS=6
 MINA_LIBP2P_PASS="şifre"
 ```
+
 ```
 chmod 600 ~/.mina-env
 ```
 
 * Copy paste in one go
+
 ```
 sudo tee /usr/lib/systemd/user/mina.service > /dev/null << EOF
 [Unit]
@@ -100,6 +112,7 @@ ExecStop=/usr/local/bin/mina client stop-daemon
 WantedBy=default.target
 EOF
 ```
+
 ```
 
 systemctl --user daemon-reload
@@ -110,6 +123,7 @@ journalctl --user-unit mina -n 1000 -f
 ```
 
 Not: Just wait a little while, it will give you this output.
+
 ```
 mina client status
 ```
