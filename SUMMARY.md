@@ -32,4 +32,4 @@
   * [Useful Commands](active-testnets/ojo/commands.md)
  
 * [Mina Testworld-2](active-testnets/Mina-Testworld-2/Readme.md)
- * [Block Producer](/active-testnets/Mina-Testworld-2/BlockProducer.md)
+  * [Block Producer](/active-testnets/Mina-Testworld-2/BlockProducer.md)
