@@ -12,6 +12,7 @@ sudo apt-get update && sudo apt upgrade
 sudo apt-get install -y mina-berkeley=2.0.0rampup6-4061884
 ```
 ```
+systemctl --user daemon-reload
 systemctl --user restart mina
 ```
 
