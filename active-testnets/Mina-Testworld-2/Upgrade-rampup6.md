@@ -14,3 +14,5 @@ sudo apt-get install -y mina-berkeley=2.0.0rampup6-4061884
 ```
 systemctl --user restart mina
 ```
+
+### `mina client status` should return `Git SHA-1: 4061884b18137c1182c7fcfa80f52804008a2509`
