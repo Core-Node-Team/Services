@@ -34,3 +34,5 @@
 * [Mina Testworld-2](active-testnets/Mina-Testworld-2/Readme.md)
   * [Block Producer](/active-testnets/Mina-Testworld-2/BlockProducer.md)
      * [Upgrade-rampup6](/active-testnets/Mina-Testworld-2/Upgrade-rampup6.md)
+   
+* [Pactus-Testnet](active-testnets/Pactus/Kurulum.md)
