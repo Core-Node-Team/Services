@@ -4,6 +4,11 @@
 
 ## Active Testnets
 
+* [Arkeo](active-testnets/Arkeo/README.md)
+  * [Installation](active-testnets/Arkeo/installation.md)
+    * [Manuel Installation](active-testnets/Arkeo/manuel-install.md)
+  * [Useful Commands](active-testnets/Arkeo/usefulcommands.md)
+
 * [Babylon](active-testnets/babylon/README.md)
   * [Installation](active-testnets/babylon/installation.md)
     * [Manuel Installation](active-testnets/babylon/manuel-install.md)
