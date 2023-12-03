@@ -11,12 +11,16 @@
 
 
 ### Sistem Gereksinimleri
+
+
 | Bileşenler | Minimum Gereksinimler | 
 | ------------ | ------------ |
 | ✔️CPU |	2+ vcpu|
 | ✔️RAM	| 4+ GB |
 | ✔️Storage	| 40+ GB SSD |
 | ✔️UBUNTU | 22 |
+
+
 ## Update
 ```
 sudo apt update && sudo apt upgrade -y
