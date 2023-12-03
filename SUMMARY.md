@@ -9,6 +9,7 @@
   * [installation-Ubuntu 20](active-testnets/Avail/Ubuntu-20-installation.md)
   * [installation-Ubuntu 22](active-testnets/Avail/Ubuntu-22-installation.md)
   * [Wallet-Validator](active-testnets/Avail/Wallet-Validator.md)
+  * [Light-Node](active-testnets/Avail/Light-Node.md)
 
 * [Arkeo](active-testnets/Arkeo/README.md)
   * [Installation](active-testnets/Arkeo/installation.md)
