@@ -5,7 +5,7 @@
 ## Active Testnets
 
 * [Avail](active-testnets/Avail/README.md)
-  * [Clash of Nodes](active-testnets/Arkeo/Clash of Nodes.md)
+  * [Clash of Nodes](active-testnets/Avail/Clash of Nodes.md)
   * [installation-Ubuntu 20](active-testnets/Avail/Ubuntu-20-installation.md)
   * [installation-Ubuntu 22](active-testnets/Avail/Ubuntu-22-installation.md)
   * [Wallet-Validator](active-testnets/Avail/Wallet-Validator.md)
