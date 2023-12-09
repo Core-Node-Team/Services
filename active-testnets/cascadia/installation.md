@@ -42,13 +42,13 @@ cascadiad status 2>&1 | jq .SyncInfo
 
 ```bash
 cascadiad tx staking create-validator \
---amount 1000000aCC \
+--amount 1000000000000000000aCC \
 --pubkey $(cascadiad tendermint show-validator) \
 --moniker "MONIKER_NAME" \
 --identity "KEYBASE_ID" \
 --details "Core Node Community" \
 --website "WEBSITE_URL" \
---chain-id cascadia_6102-1 \
+--chain-id cascadia_11029-1 \
 --commission-rate 0.05 \
 --commission-max-rate 0.20 \
 --commission-max-change-rate 0.01 \
