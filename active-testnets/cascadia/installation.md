@@ -2,7 +2,7 @@
 
 ![cascadia](https://github.com/Core-Node-Team/Gitbook/assets/108215275/eeb809a7-d806-40ba-ad80-2f9e3d98ba0a)
 
-<table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Latest Version</th><th align="center">Custom Port</th></tr></thead><tbody><tr><td align="center"><mark style="color:orange;">cascadia_6102-1</mark></td><td align="center"><mark style="color:green;">0.1.4</mark></td><td align="center"><mark style="color:yellow;">119</mark></td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Latest Version</th><th align="center">Custom Port</th></tr></thead><tbody><tr><td align="center"><mark style="color:orange;">cascadia_11029-1</mark></td><td align="center"><mark style="color:green;">0.1.9</mark></td><td align="center"><mark style="color:yellow;">119</mark></td></tr></tbody></table>
 
 > #### Hardware Requirements
 
