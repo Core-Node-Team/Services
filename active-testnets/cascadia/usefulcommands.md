@@ -48,7 +48,7 @@ cascadiad tx staking create-validator \
 --identity "KEYBASE_ID" \
 --details "DETAILS" \
 --website "WEBSITE_URL" \
---chain-id cascadia_6102-1 \
+--chain-id cascadia_11029-1 \
 --commission-rate 0.05 \
 --commission-max-rate 0.20 \
 --commission-max-change-rate 0.01 \
@@ -68,7 +68,7 @@ cascadiad tx staking edit-validator \
 --identity "KEYBASE_ID" \
 --details "DETAILS" \
 --website "WEBSITE_URL" \
---chain-id cascadia_6102-1 \
+--chain-id cascadia_11029-1 \
 --commission-rate 0.05 \
 --from wallet \
 --gas-adjustment 1.5 \
@@ -86,7 +86,7 @@ cascadiad q staking validator $(cascadiad keys show wallet --bech val -a)
 ### Validator Unjail
 
 ```
-cascadiad tx slashing unjail --from wallet --chain-id cascadia_6102-1 --gas-adjustment 1.5 --gas auto --gas-prices  -y
+cascadiad tx slashing unjail --from wallet --chain-id cascadia_11029-1 --gas-adjustment 1.5 --gas auto --gas-prices  -y
 ```
 
 ### Jail Reason
@@ -112,49 +112,49 @@ cascadiad q staking validators -oj --limit=3000 | jq '.validators[] | select(.st
 ### Send Token
 
 ```
-cascadiad tx bank send wallet <TO_WALLET_ADDRESS> 1000000aCC --from wallet --chain-id cascadia_6102-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
+cascadiad tx bank send wallet <TO_WALLET_ADDRESS> 1000000aCC --from wallet --chain-id cascadia_11029-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
 ```
 
 ### Delegate
 
 ```
-cascadiad tx staking delegate <TO_VALOPER_ADDRESS> 1000000aCC --from wallet --chain-id cascadia_6102-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
+cascadiad tx staking delegate <TO_VALOPER_ADDRESS> 1000000aCC --from wallet --chain-id cascadia_11029-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
 ```
 
 ### Delegate To Yourself
 
 ```
-cascadiad tx staking delegate $(cascadiad keys show wallet --bech val -a) 1000000aCC --from wallet --chain-id cascadia_6102-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
+cascadiad tx staking delegate $(cascadiad keys show wallet --bech val -a) 1000000aCC --from wallet --chain-id cascadia_11029-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
 ```
 
 ### Redelegate
 
 ```
-cascadiad tx staking redelegate <FROM_VALOPER_ADDRESS> <TO_VALOPER_ADDRESS> 1000000aCC --from wallet --chain-id cascadia_6102-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
+cascadiad tx staking redelegate <FROM_VALOPER_ADDRESS> <TO_VALOPER_ADDRESS> 1000000aCC --from wallet --chain-id cascadia_11029-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
 ```
 
 ### Redelegate From Your Validator To Another
 
 ```
-cascadiad tx staking redelegate $(cascadiad keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000aCC --from wallet --chain-id cascadia_6102-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
+cascadiad tx staking redelegate $(cascadiad keys show wallet --bech val -a) <TO_VALOPER_ADDRESS> 1000000aCC --from wallet --chain-id cascadia_11029-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
 ```
 
 ### Unbond Tokens From Your Validator
 
 ```
-cascadiad tx staking unbond $(cascadiad keys show wallet --bech val -a) 1000000aCC --from wallet --chain-id cascadia_6102-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
+cascadiad tx staking unbond $(cascadiad keys show wallet --bech val -a) 1000000aCC --from wallet --chain-id cascadia_11029-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
 ```
 
 ### Withdraw Rewards From All Validators
 
 ```
-cascadiad tx distribution withdraw-all-rewards --from wallet --chain-id cascadia_6102-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
+cascadiad tx distribution withdraw-all-rewards --from wallet --chain-id cascadia_11029-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
 ```
 
 ### Withdraw Commission And Rewards From Your Validator
 
 ```
-cascadiad tx distribution withdraw-rewards $(cascadiad keys show wallet --bech val -a) --commission --from wallet --chain-id cascadia_6102-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
+cascadiad tx distribution withdraw-rewards $(cascadiad keys show wallet --bech val -a) --commission --from wallet --chain-id cascadia_11029-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
 ```
 
 ## Governance
@@ -174,25 +174,25 @@ cascadiad query gov proposal <ID>
 ### Vote Yes
 
 ```
-cascadiad tx gov vote <ID> yes --from wallet --chain-id cascadia_6102-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
+cascadiad tx gov vote <ID> yes --from wallet --chain-id cascadia_11029-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
 ```
 
 ### Vote No
 
 ```
-cascadiad tx gov vote <ID> no --from wallet --chain-id cascadia_6102-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
+cascadiad tx gov vote <ID> no --from wallet --chain-id cascadia_11029-11 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
 ```
 
 ### Vote Abstain
 
 ```
-cascadiad tx gov vote <ID> abstain --from wallet --chain-id cascadia_6102-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
+cascadiad tx gov vote <ID> abstain --from wallet --chain-id cascadia_11029-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
 ```
 
 ### Vote No With Veto
 
 ```
-cascadiad tx gov vote <ID> no_with_veto --from wallet --chain-id cascadia_6102-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
+cascadiad tx gov vote <ID> no_with_veto --from wallet --chain-id cascadia_11029-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.1aCC -y
 ```
 
 ## Configuration Settings
