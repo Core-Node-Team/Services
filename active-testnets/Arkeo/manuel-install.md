@@ -23,7 +23,7 @@ rm -rf go1.20.4.linux-amd64.tar.gz
 
 ## Install Binary
 ```bash
-wget http://37.120.189.81/Arkeo/arkeod
+wget http://snapshot.corenode.info/arkeo_testnet/arkeod
 chmod +x arkeod
 mv arkeod $HOME/go/bin/
 ```
@@ -87,7 +87,11 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl enable arkeo
 ```
-
+## Snapshot
+```bash
+arkeod tendermint unsafe-reset-all --home $HOME/.arkeod --keep-addr-book
+curl -L http://snapshot.corenode.info/arkeo_testnet/arkeo_snap.tar.lz4 | tar -I lz4 -xf - -C /.arkeod/data
+```
 
 
 ## Start Node And Follow Logs
