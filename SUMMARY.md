@@ -14,6 +14,7 @@
 * [Arkeo](active-testnets/Arkeo/README.md)
   * [Installation](active-testnets/Arkeo/installation.md)
     * [Manuel Installation](active-testnets/Arkeo/manuel-install.md)
+  * [Snapshot](active-testnets/Arkeo/snapshot.md)
   * [Useful Commands](active-testnets/Arkeo/usefulcommands.md)
 
 * [Babylon](active-testnets/babylon/README.md)
