@@ -80,6 +80,10 @@ EOF
 systemctl daemon-reload
 systemctl enable ojod
 ```
+### Snapshot
+```bash
+curl -L http://snapshot.corenode.info/ojo_testnet/ojo_snap.tar.lz4 | tar -I lz4 -xf - -C $HOME/.ojo/data
+```
 
 ### Start Node And Follow Logs
 
