@@ -72,7 +72,7 @@ sed -i -e "s%^address = \"tcp://localhost:1317\"%address = \"tcp://localhost:${C
 ```bash
 sudo apt install liblz4-tool -y
 
-curl -L http://202.61.243.24/CoreNode_ChainServices/elys_snapshot.tar.lz4 | tar -I lz4 -xf - -C $HOME/.elys/data
+curl -L http://snapshot.corenode.info/elys_testnet/elys_snap.tar.lz4 | tar -I lz4 -xf - -C /.elysd/data
 ```
 
 ### Create Service
