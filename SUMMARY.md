@@ -6,7 +6,7 @@
 
 * [Althea](active-testnets/Althea/Readme.md)
   * [Kurulum](active-testnets/Althea/Kurulum.md)
-    * [Manuel Kurulum](active-testnets/Althea/ManuelKurulum.md)
+    * [Manuel Kurulum](active-testnets/Althea/Manuel%20Kurulum.md)
   * [Snapshot](active-testnets/Althea/snapshot.md)
 
 * [Avail](active-testnets/Avail/README.md)
