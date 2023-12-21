@@ -1,4 +1,5 @@
 # Snapshot
+
 ```bash
 sudo apt install liblz4-tool
 
@@ -8,7 +9,7 @@ cp $HOME/.arkeod/data/priv_validator_state.json $HOME/.arkeod/priv_validator_sta
 
 arkeod tendermint unsafe-reset-all --home $HOME/.arkeod --keep-addr-book
 
-curl -L http://snapshot.corenode.info/arkeo_testnet/arkeo_snap.tar.lz4 | tar -I lz4 -xf - -C /.arkeod/data
+curl -L http://37.120.189.81/arkeo_testnet/arkeo_snap.tar.lz4 | tar -I lz4 -xf - -C /.arkeod/data
 
 mv $HOME/.arkeod/priv_validator_state.json.backup $HOME/.arkeod/data/priv_validator_state.json
 
