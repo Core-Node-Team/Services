@@ -4,6 +4,9 @@
 
 ## Active Testnets
 
+* [Althea](active-testnets/Althea/Readme.md)
+  *[Kurulum](active-testnets/Althea/Kurulum.md)
+
 * [Avail](active-testnets/Avail/README.md)
   * [Clash-of-Nodes](active-testnets/Avail/Clash-of-Nodes.md)
   * [installation-Ubuntu 20](active-testnets/Avail/Ubuntu-20-installation.md)
