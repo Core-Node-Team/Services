@@ -3,7 +3,7 @@
 ```bash
 sudo apt install liblz4-tool
 
-systemctl stop arkeod
+systemctl stop althea
 
 cp $HOME/.althea/data/priv_validator_state.json $HOME/.althea/priv_validator_state.json.backup
 
