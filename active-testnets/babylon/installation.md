@@ -10,7 +10,7 @@
 ## For automatic installation, enter this command and follow the instructions
 
 ```bash
-curl -sSL -o babylon.sh https://raw.githubusercontent.com/Core-Node-Team/Testnet-Guides/main/Babylon/babylon.sh && chmod +x babylon.sh && bash ./babylon.sh && source $HOME/.bash_profile && rm babylon.sh 
+curl -sSL -o babylon.sh https://raw.githubusercontent.com/Core-Node-Team/scripts/main/babylon/install.sh && chmod +x babylon.sh && bash ./babylon.sh && source $HOME/.bash_profile && rm babylon.sh 
 ```
 
 ## For manuel installation follow this [guide](manuel-install.md)
