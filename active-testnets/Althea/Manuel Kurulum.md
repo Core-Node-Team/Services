@@ -33,7 +33,7 @@ althea config node tcp://localhost:31557
 althea init $MONIKER --chain-id althea_417834-3
 ```
 
-## Config
+## Yapılandırma
 ```bash
 curl -Ls https://raw.githubusercontent.com/Core-Node-Team/scripts/main/althea/addrbook.json > $HOME/$DirectName/config/addrbook.json
 curl -Ls https://raw.githubusercontent.com/Core-Node-Team/scripts/main/althea/genesis.json > $HOME/$DirectName/config/genesis.json
@@ -41,9 +41,9 @@ curl -Ls https://raw.githubusercontent.com/Core-Node-Team/scripts/main/althea/ge
 peers="bc47f3e8f9134a812462e793d8767ef7334c0119@chainripper-2.althea.net:23296"
 seeds=""
 sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/$DirectName/config/config.toml
+
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0001aalthea"|g' $HOME/.althea/config/app.toml
 sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.althea/config/config.toml
-
 
 # puruning
 sed -i \
