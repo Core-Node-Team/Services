@@ -103,4 +103,4 @@ sudo systemctl enable babylond
 sudo systemctl start babylond && sudo journalctl -u babylond -fo cat
 ```
 
-Continue to [Become A Validator](installation.md#becomevalidator)
+### **Continue To** [**Become A Validator**](installation.md#become-a-validator)
