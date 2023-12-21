@@ -9,7 +9,7 @@
 
 ## For automatic installation, enter this command and follow the instructions
 ```bash
-curl -sSL -o arkeo.sh https://raw.githubusercontent.com/Core-Node-Team/Testnet-TR/main/Arkeo/arkeoinstall.sh && chmod +x arkeo.sh && bash ./arkeo.sh && source $HOME/.bash_profile && rm arkeo.sh
+curl -sSL -o arkeo.sh https://raw.githubusercontent.com/Core-Node-Team/scripts/main/arkeo/install.sh && chmod +x arkeo.sh && bash ./arkeo.sh && source $HOME/.bash_profile && rm arkeo.sh
 ```
 
 
