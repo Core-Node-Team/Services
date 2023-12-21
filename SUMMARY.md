@@ -5,7 +5,7 @@
 ## Active Testnets
 
 * [Althea](active-testnets/Althea/Readme.md)
-  *[Kurulum](active-testnets/Althea/Kurulum.md)
+  * [Kurulum](active-testnets/Althea/Kurulum.md)
 
 * [Avail](active-testnets/Avail/README.md)
   * [Clash-of-Nodes](active-testnets/Avail/Clash-of-Nodes.md)
