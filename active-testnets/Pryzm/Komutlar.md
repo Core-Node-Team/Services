@@ -167,6 +167,7 @@ sed -i -e "s%^address = \"tcp://localhost:1317\"%address = \"tcp://localhost:316
 ```
 ## Min Gas Price Ayarla
 ```
+sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.015upryzm\"|" $HOME/.pryzm/config/app.toml
 
 ```
 ## Prometheus Aktif Et
