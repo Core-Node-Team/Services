@@ -8,6 +8,7 @@
   * [Kurulum](active-testnets/Althea/Kurulum.md)
     * [Manuel Kurulum](active-testnets/Althea/Manuel%20Kurulum.md)
   * [Snapshot](active-testnets/Althea/snapshot.md)
+  * [Yararlı Komutlar](active-testnets/Althea/yararlı-komutlar.md)
 
 * [Avail](active-testnets/Avail/README.md)
   * [Clash-of-Nodes](active-testnets/Avail/Clash-of-Nodes.md)
