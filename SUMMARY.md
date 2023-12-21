@@ -6,6 +6,8 @@
 
 * [Althea](active-testnets/Althea/Readme.md)
   * [Kurulum](active-testnets/Althea/Kurulum.md)
+    * [Manuel Kurulum](active-testnets/Althea/ManuelKurulum.md)
+  * [Snapshot](active-testnets/Althea/snapshot.md)
 
 * [Avail](active-testnets/Avail/README.md)
   * [Clash-of-Nodes](active-testnets/Avail/Clash-of-Nodes.md)
