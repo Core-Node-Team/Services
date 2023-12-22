@@ -83,7 +83,7 @@ sudo systemctl enable prysmd
 ```bash
 sudo systemctl start prysmd && sudo journalctl -u prysmd -fo cat
 ```
-### [**Valitatör Oluşturma**](installation.md#become-a-validator) adımları ile devam edin
+### [**Valitatör Oluşturma**](Kurulum.md#Validatör-Olun) adımları ile devam edin
 
 
 
