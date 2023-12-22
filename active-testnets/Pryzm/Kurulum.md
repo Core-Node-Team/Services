@@ -46,7 +46,7 @@ pryzmd status 2>&1 | jq .SyncInfo
 pryzmd tx staking create-validator \
 --amount 1000000upryzm \
 --pubkey $(pryzmd tendermint show-validator) \
---moniker "MONIKER" \
+--moniker "$MONIKER" \
 --identity "KEYBASE_ID" \
 --details "Core Node Community" \
 --website "WEBSITE_URL" \
