@@ -43,7 +43,7 @@
   * [Useful Commands](active-testnets/ojo/commands.md)
 * [Pryzm](active-testnets/Pryzm/Readme.md)
   * [Kurulum](active-testnets/Pryzm/Kurulum.md)
-    * [Manuel Kurulum](<active-testnets/Pryzm/Manuel Kurulum.md>)
+    * [Manuel Kurulum](active-testnets/Pryzm/Manuel%20Kurulum.md)
   * [Snapshot](active-testnets/Pryzm/Snapshot.md)
   * [Yararlı Komutlar](active-testnets/Pryzm/Komutlar.md)
  
