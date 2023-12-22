@@ -23,14 +23,17 @@ mv pryzmd $HOME/go/bin
 ```
 ## İnitalize
 ```bash
-prysmd config chain-id indigo-1
-prysmd config keyring-backend test
-prysmd config node tcp://localhost:31657
-prysmd init $MONIKER --chain-id indigo-1
+pryzmd config chain-id indigo-1
+pryzmd config keyring-backend test
+pryzmd config node tcp://localhost:31657
+pryzmd init $MONIKER --chain-id indigo-1
 ```
 
 ## Yapılandırma
 ```bash
+DirectName=".pryzm" #database directory
+CustomPort="316"
+
 curl -Ls https://raw.githubusercontent.com/Core-Node-Team/scripts/main/pryzm/addrbook.json > $HOME/$DirectName/config/addrbook.json
 curl -Ls https://raw.githubusercontent.com/Core-Node-Team/scripts/main/pryzm/genesis.json > $HOME/$DirectName/config/genesis.json
 
@@ -51,7 +54,6 @@ sed -i \
 # indexer
 sed -i -e 's|^indexer *=.*|indexer = "null"|' $HOME/$DirectName/config/config.toml
 # custom port
-CustomPort="316"
 sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CustomPort}58\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CustomPort}57\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CustomPort}60\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CustomPort}56\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CustomPort}66\"%" $HOME/$DirectName/config/config.toml
 sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CustomPort}17\"%; s%^address = \":8080\"%address = \":${CustomPort}80\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CustomPort}90\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CustomPort}91\"%; s%:8545%:${CustomPort}45%; s%:8546%:${CustomPort}46%; s%:6065%:${CustomPort}65%" $HOME/$DirectName/config/app.toml
 sed -i -e "s%^address = \"tcp://localhost:1317\"%address = \"tcp://localhost:${CustomPort}17\"%; s%^address = \":8080\"%address = \":${CustomPort}80\"%; s%^address = \"localhost:9090\"%address = \"localhost:${CustomPort}90\"%; s%^address = \"localhost:9091\"%address = \"localhost:${CustomPort}91\"%; s%:8545%:${CustomPort}45%; s%:8546%:${CustomPort}46%; s%:6065%:${CustomPort}65%" $HOME/$DirectName/config/app.toml
@@ -62,13 +64,13 @@ curl -L http://37.120.189.81/pryzm_testnet/pryzm_snap.tar.lz4 | tar -I lz4 -xf -
 ```
 ## Service
 ```bash
-sudo tee /etc/systemd/system/prysmd.service > /dev/null <<EOF
+sudo tee /etc/systemd/system/pryzmd.service > /dev/null <<EOF
 [Unit]
-Description=Prysm Node
+Description=Pryzm Node
 After=network-online.target
 [Service]
 User=$USER
-ExecStart=$(which prysmd) start --home $HOME/.prysm
+ExecStart=$(which pryzmd) start --home $HOME/.pryzm
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=65535
@@ -77,11 +79,11 @@ WantedBy=multi-user.target
 EOF
 
 sudo systemctl daemon-reload
-sudo systemctl enable prysmd
+sudo systemctl enable pryzmd
 ```
 ## Nodu Başlatın ve Logları Görüntüleyin
 ```bash
-sudo systemctl start prysmd && sudo journalctl -u prysmd -fo cat
+sudo systemctl start pryzmd && sudo journalctl -u pryzmd -fo cat
 ```
 ### [**Valitatör Oluşturma**](Kurulum.md#validatör-olun) adımları ile devam edin
 
