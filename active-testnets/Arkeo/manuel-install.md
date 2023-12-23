@@ -90,7 +90,7 @@ sudo systemctl enable arkeo
 ## Snapshot
 ```bash
 arkeod tendermint unsafe-reset-all --home $HOME/.arkeod --keep-addr-book
-curl -L http://37.120.189.81/arkeo_testnet/arkeo_snap.tar.lz4 | tar -I lz4 -xf - -C /.arkeod/data
+curl -L http://37.120.189.81/arkeo_testnet/arkeo_snap.tar.lz4 | tar -I lz4 -xf - -C /.arkeod
 ```
 
 
