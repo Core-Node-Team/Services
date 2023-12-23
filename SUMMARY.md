@@ -46,7 +46,8 @@
     * [Manuel Kurulum](active-testnets/Pryzm/Manuel%20Kurulum.md)
   * [Snapshot](active-testnets/Pryzm/Snapshot.md)
   * [Yararlı Komutlar](active-testnets/Pryzm/Komutlar.md)
- 
+    
+#  *[Pryzm-Feeder](active-testnets/Pryzm/Pryzm-Feeder.md)
 
 * [Mina Testworld-2](active-testnets/Mina-Testworld-2/Readme.md)
   * [Block Producer](active-testnets/Mina-Testworld-2/BlockProducer.md)
