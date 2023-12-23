@@ -19,10 +19,9 @@ rm -rf go1.20.4.linux-amd64.tar.gz
 ```
 ## Binary Kurulumu
 ```bash
-git clone https://github.com/althea-net/althea-chain
-cd althea-chain
-git checkout v0.5.5
-make install
+wget -O $HOME/go/bin/althea https://github.com/althea-net/althea-L1/releases/download/v0.5.5/althea-linux-amd64
+chmod +x $HOME/go/bin/althea
+source $HOME/.bash_profile
 ```
 
 ## İnitalize
