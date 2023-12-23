@@ -88,7 +88,7 @@ sed -i 's/password: ".*"/password: "'"$Password"'"/g' config.yaml
 sed -i 's/validator: ""/validator: "'"$Validator"'"/g' config.yaml
 sed -i 's/rpcUrl: "http:\/\/localhost:[^"]*"/rpcUrl: "http:\/\/localhost:'"$CustomPort"'57"/g' config.yaml
 sed -i 's/grpcWebUrl: "http:\/\/localhost:[^"]*"/grpcWebUrl: "http:\/\/localhost:'"$CustomPort"'91"/g' config.yaml
-sed -i 's/wsUrl: "ws:\/\/localhost:[^"]*"/wsUrl: "ws:\/\/localhost:'"$CustomPort"'657"/g' config.yaml
+sed -i 's/wsUrl: "ws:\/\/localhost:[^"]*"/wsUrl: "ws:\/\/localhost:'"$CustomPort"'57"/g' config.yaml
 sed -i '0,/lcdUrl: "http:\/\/localhost:[^"]*"/ s/lcdUrl: "http:\/\/localhost:[^"]*"/lcdUrl: "http:\/\/localhost:'"$CustomPort"'17"/' config.yaml
 ```
 
@@ -101,9 +101,18 @@ sed -i 's|^indexer *=.*|indexer = "kv"|' $HOME/.pryzm/config/config.toml
 ```
 pryzmd tx oracle delegate-feed-consent $Adres --from wallet --gas-prices 0.015upryzm
 ```
+## Node.js Kur
+```
+curl -sL https://deb.nodesource.com/setup_18.x | sudo bash -
+```
+```
+sudo apt-get install -y nodejs
+node -v
+```
 ## Başlat
 ```
 screen -S feeder
+cd $HOME/feeder
 node ./lib/vote.js app/config.yaml
 ```
 
