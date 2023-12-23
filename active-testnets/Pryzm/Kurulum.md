@@ -17,7 +17,7 @@ curl -sSL -o pryzm.sh https://raw.githubusercontent.com/Core-Node-Team/scripts/m
 
 ### Explorer Link [BURAYA TIKLA](https://testnets.cosmosrun.info/pryzm-indigo-1/staking)
 
-## Manuel kurulum için [rehber](active-testnets/pryzm/manuel%20kurulum.md)'i takip edin
+## Manuel kurulum için [rehber](active-testnets/Pryzm/Manuel%20Kurulum.md)'i takip edin
 
 ## Validatör Olun
 
