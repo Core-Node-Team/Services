@@ -15,7 +15,7 @@ curl -sSL -o althea.sh https://raw.githubusercontent.com/Core-Node-Team/scripts/
 
 
 
-## Manuel kurulum için [rehber](manuel-install.md)'i takip edin
+## Manuel kurulum için [rehber](active-testnets/Althea/Manuel%20Kurulum.md)'i takip edin
 
 ## Validatör Olun
 
