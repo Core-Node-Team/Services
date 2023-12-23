@@ -82,7 +82,7 @@ systemctl enable ojod
 ```
 ### Snapshot
 ```bash
-curl -L http://37.120.189.81/ojo_testnet/ojo_snap.tar.lz4 | tar -I lz4 -xf - -C $HOME/.ojo/data
+curl -L http://37.120.189.81/ojo_testnet/ojo_snap.tar.lz4 | tar -I lz4 -xf - -C $HOME/.ojo
 ```
 
 ### Start Node And Follow Logs
