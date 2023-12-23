@@ -1,4 +1,6 @@
-#
+# Pryzm Feeder
+### Yalnızca aktif settekiler çalıştırabilir.
+
 
 ## Timescaledb Kurulumu
 ```
