@@ -57,9 +57,36 @@ cd feeder/app
 wget https://storage.googleapis.com/pryzm-zone/feeder/config.yaml
 wget https://storage.googleapis.com/pryzm-zone/feeder/init.sql
 ```
+## Yapılandırma dosyası
+## Değişkenleri ayarla
 ```
-nano config.yaml
+Adres="feeder adres"
+Mnemonic="feeder mnemonic"
+Validator="valoper adresi"
+Password="postgres şifresi"
+CustomPort="316"
+GasPrice="0.015upryzm"
 ```
+
+```
+sed -i 's/name: "pryzm-feeder"/name: "pryzmfeeder"/g' config.yaml
+sed -i 's/gasPrice: "[^"]*"/gasPrice: "'"$GasPrice"'"/g' config.yaml
+sed -i 's/feeder: ""/feeder: "'"$Adres"'"/g' config.yaml
+sed -i 's/feederMnemonic: ""/feederMnemonic: "'"$Mnemonic"'"/g' config.yaml
+sed -i 's/password: ".*"/password: "'"$Password"'"/g' config.yaml
+sed -i 's/validator: ""/validator: "'"$Validator"'"/g' config.yaml
+sed -i 's/rpcUrl: "http:\/\/localhost:[^"]*"/rpcUrl: "http:\/\/localhost:'"$CustomPort"'57"/g' config.yaml
+sed -i 's/grpcWebUrl: "http:\/\/localhost:[^"]*"/grpcWebUrl: "http:\/\/localhost:'"$CustomPort"'91"/g' config.yaml
+sed -i 's/wsUrl: "ws:\/\/localhost:[^"]*"/wsUrl: "ws:\/\/localhost:'"$CustomPort"'657"/g' config.yaml
+sed -i '0,/lcdUrl: "http:\/\/localhost:[^"]*"/ s/lcdUrl: "http:\/\/localhost:[^"]*"/lcdUrl: "http:\/\/localhost:'"$CustomPort"'17"/' config.yaml
+```
+## Başlat
+```
+screen -S feeder
+node ./lib/vote.js app/config.yaml
+```
+
+
 
 
 
