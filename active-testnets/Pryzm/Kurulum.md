@@ -15,7 +15,7 @@
 curl -sSL -o pryzm.sh https://raw.githubusercontent.com/Core-Node-Team/scripts/main/pryzm/install.sh && chmod +x pryzm.sh && bash ./pryzm.sh && source $HOME/.bash_profile && rm pryzm.sh
 ```
 
-
+### Explorer Link [BURAYA TIKLA](https://testnets.cosmosrun.info/pryzm-indigo-1/staking)
 
 ## Manuel kurulum için [rehber](manuel-install.md)'i takip edin
 
