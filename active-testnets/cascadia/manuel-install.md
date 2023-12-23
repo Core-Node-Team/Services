@@ -72,7 +72,7 @@ sed -i -e 's|^indexer *=.*|indexer = "null"|' $HOME/.cascadiad/config/config.tom
 ```bash
 sudo apt install liblz4-tool -y
 
-curl -L http://37.120.189.81/cascadia_testnet/cascadia_snap.tar.lz4 | tar -I lz4 -xf - -C /.cascadiad/data
+curl -L http://37.120.189.81/cascadia_testnet/cascadia_snap.tar.lz4 | tar -I lz4 -xf - -C /.cascadiad
 ```
 
 ### Create Service
