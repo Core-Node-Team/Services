@@ -73,7 +73,7 @@ sed -i -e 's|^indexer *=.*|indexer = "null"|' $HOME/.babylond/config/config.toml
 ```bash
 sudo apt install liblz4-tool -y
 
-curl -L http://37.120.189.81/babylon_testnet/babylon_snap.tar.lz4 | tar -I lz4 -xf - -C /.babylond/data
+curl -L http://37.120.189.81/babylon_testnet/babylon_snap.tar.lz4 | tar -I lz4 -xf - -C /.babylond
 ```
 
 ## Create Service
