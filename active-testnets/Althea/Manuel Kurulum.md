@@ -63,7 +63,7 @@ sed -i -e "s%^address = \"tcp://localhost:1317\"%address = \"tcp://localhost:${C
 
 ## Snapshot
 ```bash
-curl -L http://37.120.189.81/althea_testnet/althea_snap.tar.lz4 | tar -I lz4 -xf - -C $HOME/.althea/data
+curl -L http://37.120.189.81/althea_testnet/althea_snap.tar.lz4 | tar -I lz4 -xf - -C $HOME/.althea
 ```
 ## Service
 ```bash
