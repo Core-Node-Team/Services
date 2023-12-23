@@ -9,7 +9,7 @@ cp $HOME/.elys/data/priv_validator_state.json $HOME/.elys/priv_validator_state.j
 
 elysd tendermint unsafe-reset-all
 
-curl -L http://37.120.189.81/elys_testnet/elys_snap.tar.lz4 | tar -I lz4 -xf - -C /.elysd/data
+curl -L http://37.120.189.81/elys_testnet/elys_snap.tar.lz4 | tar -I lz4 -xf - -C /.elysd
 
 mv $HOME/.elys/priv_validator_state.json.backup $HOME/.elys/data/priv_validator_state.json
 
