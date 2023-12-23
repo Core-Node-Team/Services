@@ -89,5 +89,5 @@ sudo systemctl enable althea
 sudo systemctl start althea && sudo journalctl -u althea -fo cat
 ```
 
-### [**Valitatör Oluşturma**](installation.md#become-a-validator) adımları ile devam edin
+### [**Valitatör Oluşturma**](active-testnets/Althea/Kurulum.md#validatör-olun) adımları ile devam edin
 
