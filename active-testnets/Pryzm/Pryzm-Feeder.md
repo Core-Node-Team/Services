@@ -98,6 +98,7 @@ sed -i '0,/lcdUrl: "http:\/\/localhost:[^"]*"/ s/lcdUrl: "http:\/\/localhost:[^"
 ## İndexer Aç
 ```
 sed -i 's|^indexer *=.*|indexer = "kv"|' $HOME/.pryzm/config/config.toml
+sudo systemctl restart pryzmd
 ```
 ## Cüzdanları bağla
 ```
