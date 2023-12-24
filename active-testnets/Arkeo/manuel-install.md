@@ -25,6 +25,7 @@ rm -rf go1.20.4.linux-amd64.tar.gz
 ```bash
 wget http://37.120.189.81/arkeo_testnet/arkeod
 chmod +x arkeod
+mkdir -p $HOME/go/bin
 mv arkeod $HOME/go/bin/
 ```
 
