@@ -23,7 +23,7 @@ rm -rf go1.20.4.linux-amd64.tar.gz
 
 ## Install Binary
 ```bash
-wget http://snapshot.corenode.info/arkeo_testnet/arkeod
+wget http://37.120.189.81/arkeo_testnet/arkeod
 chmod +x arkeod
 mv arkeod $HOME/go/bin/
 ```
