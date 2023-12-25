@@ -56,7 +56,7 @@ althea tx staking create-validator \
 --from wallet \
 --gas-adjustment 1.5 \
 --gas auto \
---gas-prices 0aalthea \
+--gas-prices 40aalthea \
 -y
 ```
 
