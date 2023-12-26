@@ -19,6 +19,7 @@ rm -rf go1.20.4.linux-amd64.tar.gz
 ```bash
 wget https://storage.googleapis.com/pryzm-resources/pryzmd-0.9.0-linux-amd64.tar.gz
 tar -xzvf pryzmd-0.9.0-linux-amd64.tar.gz
+mkdir -p $HOME/go/bin
 mv pryzmd $HOME/go/bin
 ```
 ## İnitalize
