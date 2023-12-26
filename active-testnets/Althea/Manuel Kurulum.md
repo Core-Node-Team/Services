@@ -21,8 +21,8 @@ rm -rf go1.20.4.linux-amd64.tar.gz
 
 #### ubuntu 22
 ```bash
-wget -O $HOME/go/bin/althea https://github.com/althea-net/althea-L1/releases/download/v0.5.5/althea-linux-amd64
 mkdir -p $HOME/go/bin
+wget -O $HOME/go/bin/althea https://github.com/althea-net/althea-L1/releases/download/v0.5.5/althea-linux-amd64
 chmod +x $HOME/go/bin/althea
 source $HOME/.bash_profile
 ```
