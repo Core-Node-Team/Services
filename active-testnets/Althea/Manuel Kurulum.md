@@ -18,12 +18,22 @@ echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.bash_profile &
 rm -rf go1.20.4.linux-amd64.tar.gz
 ```
 ## Binary Kurulumu
+
+#### ubuntu 22
 ```bash
 wget -O $HOME/go/bin/althea https://github.com/althea-net/althea-L1/releases/download/v0.5.5/althea-linux-amd64
 chmod +x $HOME/go/bin/althea
 source $HOME/.bash_profile
 ```
-
+#### ubuntu 20
+```
+apt install npm
+cd $HOME
+rm -rf althea-L1
+git clone https://github.com/althea-net/althea-L1
+cd althea-L1
+make install
+```
 ## İnitalize
 ```bash
 althea config chain-id althea_417834-3
