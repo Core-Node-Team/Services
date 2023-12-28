@@ -15,3 +15,5 @@ mv $HOME/.cascadiad/priv_validator_state.json.backup $HOME/.cascadiad/data/priv_
 
 sudo systemctl start cascadiad && sudo journalctl -u cascadiad -fo cat
 ```
+### Bizi takip edin [Twitter](https://twitter.com/corenodeHQ)
+### Topluluğumuza katılın [Telegram](https://t.me/corenodechat)
