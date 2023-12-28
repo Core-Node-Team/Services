@@ -17,10 +17,10 @@ rm -rf go1.20.4.linux-amd64.tar.gz
 ```
 ## Binary Kurulumu
 ```bash
-wget https://storage.googleapis.com/pryzm-resources/pryzmd-0.9.0-linux-amd64.tar.gz
-tar -xzvf pryzmd-0.9.0-linux-amd64.tar.gz
+wget https://storage.googleapis.com/pryzm-zone/core/0.10.0/pryzmd-0.10.0-linux-amd64
+chmod +x pryzmd-0.10.0-linux-amd64
 mkdir -p $HOME/go/bin
-mv pryzmd $HOME/go/bin
+mv pryzmd-0.10.0-linux-amd64 $HOME/go/bin
 ```
 ## İnitalize
 ```bash
@@ -61,7 +61,7 @@ sed -i -e "s%^address = \"tcp://localhost:1317\"%address = \"tcp://localhost:${C
 ```
 ## Snapshot
 ```bash
-curl -L http://37.120.189.81/pryzm_testnet/pryzm_snap.tar.lz4 | tar -I lz4 -xf - -C $HOME/.pryzm
+curl -L http://37.120.189.81/pryzm_testnet/pryzm_snap.tar.lz4 | tar -I lz4 -xf - -C $HOME/.pryzm/data
 ```
 ## Service
 ```bash
