@@ -29,3 +29,7 @@ https://leaderboard.availproject.org/
 ![image](https://github.com/Core-Node-Team/Testnet-TR/assets/91562185/47c78ba1-1c2f-46b7-bd60-280e018d4c03)
 
 - görevler yapılabilir oldukça ekleme yapacağım.
+
+
+### Bizi takip edin [Twitter](https://twitter.com/corenodeHQ)
+### Topluluğumuza katılın [Telegram](https://t.me/corenodechat)
