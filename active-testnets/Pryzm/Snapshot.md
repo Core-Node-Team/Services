@@ -16,6 +16,5 @@ mv $HOME/.pryzm/priv_validator_state.json.backup $HOME/.pryzm/data/priv_validato
 sudo systemctl start pryzmd && sudo journalctl -u pryzmd -fo cat
 ```
 #
-#
 ### Bizi takip edin [Twitter](https://twitter.com/corenodeHQ)
 ### Topluluğumuza katılın [Telegram](https://t.me/corenodechat)
