@@ -120,7 +120,8 @@ node ./lib/vote.js app/config.yaml
 ```
 
 
-
+### Bizi takip edin [Twitter](https://twitter.com/corenodeHQ)
+### Topluluğumuza katılın [Telegram](https://t.me/corenodechat)
 
 
 
