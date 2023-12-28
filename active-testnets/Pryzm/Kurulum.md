@@ -2,15 +2,14 @@
 
 ![pryzm](https://github.com/Core-Node-Team/Services/assets/108215275/0d8a7f0f-0441-43f4-8e8e-32c158c9d9e3)
 
+<table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Son Versiyon</th><th align="center">Özel Port</th></tr></thead><tbody><tr><td align="center"><mark style="color:orange;">indigo-1</mark></td><td align="center"><mark style="color:green;">0.10.0</mark></td><td align="center"><mark style="color:yellow;">316</mark></td></tr></tbody></table>
 
-<table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Son Versiyon</th><th align="center">Özel Port</th></tr></thead><tbody><tr><td align="center"><mark style="color:orange;">indigo-1</mark></td><td align="center"><mark style="color:green;">0.9.0
-</mark></td><td align="center"><mark style="color:yellow;">316</mark></td></tr></tbody></table>
+> ### Sistem Gereksinimleri
 
-
-> ## Sistem Gereksinimleri
 <table data-header-hidden data-full-width="false"><thead><tr><th width="247">Sistem Gereksinimleri</th><th></th></tr></thead><tbody><tr><td>Minimum</td><td>4CPU 8RAM 200GB</td></tr><tr><td>Tavsiye Edilen</td><td>8CPU 16RAM 1TB</td></tr></tbody></table>
 
 ## Otomatik kurulum için komutu girin ve yönergeleri takip edin
+
 ```bash
 curl -sSL -o pryzm.sh https://raw.githubusercontent.com/Core-Node-Team/scripts/main/pryzm/install.sh && chmod +x pryzm.sh && bash ./pryzm.sh && source $HOME/.bash_profile && rm pryzm.sh
 ```
@@ -28,11 +27,12 @@ curl -sSL -o pryzm.sh https://raw.githubusercontent.com/Core-Node-Team/scripts/m
 ```bash
 pryzmd keys add wallet
 ```
+
 #### Test Tokenları Edinin
 
 Prysm [Faucet](https://testnet.pryzm.zone/faucet)'a gidin
 
-#### Sync Durumunu Kontrol  Edin
+#### Sync Durumunu Kontrol Edin
 
 * Çıktısı _<mark style="color:green;">**False**</mark>_ olmalı
 
@@ -75,4 +75,3 @@ pryzmd q staking validator $(pryzmd keys show wallet --bech val -a)
 ```bash
 cat $HOME/.pryzm/config/priv_validator_key.json
 ```
-
