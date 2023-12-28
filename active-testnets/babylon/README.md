@@ -14,3 +14,6 @@
 * [Github](https://github.com/babylonchain/)
 * [Telegram](https://t.me/babyloncommunity)
 * [Turkish Telegram](https://t.me/BabylonTR)
+* 
+### Bizi takip edin [Twitter](https://twitter.com/corenodeHQ)
+### Topluluğumuza katılın [Telegram](https://t.me/corenodechat)
