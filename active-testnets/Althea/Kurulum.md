@@ -73,5 +73,7 @@ althea q staking validator $(althea keys show wallet --bech val -a)
 ```bash
 cat $HOME/.althea/config/priv_validator_key.json
 ```
+### Bizi takip edin [Twitter](https://twitter.com/corenodeHQ)
+### Topluluğumuza katılın [Telegram](https://t.me/corenodechat)
 
 
