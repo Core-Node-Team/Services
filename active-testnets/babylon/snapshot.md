@@ -15,3 +15,5 @@ mv $HOME/.babylond/priv_validator_state.json.backup $HOME/.babylond/data/priv_va
 
 sudo systemctl start babylond && sudo journalctl -u babylond -fo cat
 ```
+### Bizi takip edin [Twitter](https://twitter.com/corenodeHQ)
+### Topluluğumuza katılın [Telegram](https://t.me/corenodechat)
