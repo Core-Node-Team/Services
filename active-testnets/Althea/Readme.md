@@ -7,3 +7,7 @@
 * [Discord](https://discord.gg/f3WC88zYYQ)
 * [Website](https://www.althea.net/)
 * [Github](https://github.com/althea-net)
+
+
+### Bizi takip edin [Twitter](https://twitter.com/corenodeHQ)
+### Topluluğumuza katılın [Telegram](https://t.me/corenodechat)
