@@ -72,6 +72,8 @@ arkeod q staking validator $(arkeod keys show wallet --bech val -a)
 ```bash
 cat $HOME/.arkeo/config/priv_validator_key.json
 ```
+### Bizi takip edin [Twitter](https://twitter.com/corenodeHQ)
+### Topluluğumuza katılın [Telegram](https://t.me/corenodechat)
 
 
 
