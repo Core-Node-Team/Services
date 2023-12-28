@@ -43,12 +43,11 @@
   * [Useful Commands](active-testnets/ojo/commands.md)
 * [Pryzm](active-testnets/Pryzm/Readme.md)
   * [Kurulum](active-testnets/Pryzm/Kurulum.md)
-    * [Manuel Kurulum](active-testnets/Pryzm/Manuel%20Kurulum.md)
+    * [Manuel Kurulum](<active-testnets/Pryzm/Manuel Kurulum.md>)
   * [Güncellemeler](active-testnets/Pryzm/Güncelleme.md)
   * [Snapshot](active-testnets/Pryzm/Snapshot.md)
   * [Yararlı Komutlar](active-testnets/Pryzm/Komutlar.md)
   * [Pryzm-Feeder](active-testnets/Pryzm/Pryzm-Feeder.md)
-
 * [Mina Testworld-2](active-testnets/Mina-Testworld-2/Readme.md)
   * [Block Producer](active-testnets/Mina-Testworld-2/BlockProducer.md)
     * [Upgrade-rampup6](active-testnets/Mina-Testworld-2/Upgrade-rampup6.md)
