@@ -8,12 +8,15 @@
 > ## Sistem Gereksinimleri
 <table data-header-hidden data-full-width="false"><thead><tr><th width="247">Sistem Gereksinimleri</th><th></th></tr></thead><tbody><tr><td>Minimum</td><td>4CPU 8RAM 100GB</td></tr><tr><td>Tavsiye Edilen</td><td>4CPU 16RAM 200GB</td></tr></tbody></table>
 
-## Otomatik kurulum için komutu girin ve yönergeleri takip edin
+## UBUNTU 22 Otomatik kurulum için komutu girin ve yönergeleri takip edin
 ```bash
 curl -sSL -o althea.sh https://raw.githubusercontent.com/Core-Node-Team/scripts/main/althea/install.sh && chmod +x althea.sh && bash ./althea.sh && source $HOME/.bash_profile && rm althea.sh
 ```
 
-
+## UBUNTU 20 Otomatik kurulum için komutu girin ve yönergeleri takip edin
+```bash
+curl -sSL -o althea.sh https://raw.githubusercontent.com/Core-Node-Team/scripts/main/althea/install2.sh && chmod +x althea.sh && bash ./althea.sh && source $HOME/.bash_profile && rm althea.sh
+```
 
 ## Manuel kurulum için [rehber](active-testnets/Althea/Manuel%20Kurulum.md)'i takip edin
 
