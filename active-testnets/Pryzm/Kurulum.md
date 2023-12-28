@@ -75,3 +75,5 @@ pryzmd q staking validator $(pryzmd keys show wallet --bech val -a)
 ```bash
 cat $HOME/.pryzm/config/priv_validator_key.json
 ```
+### Bizi takip edin [Twitter](https://twitter.com/corenodeHQ)
+### Topluluğumuza katılın [Telegram](https://t.me/corenodechat)
