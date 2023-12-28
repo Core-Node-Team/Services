@@ -12,3 +12,6 @@
  * [Github](https://github.com/CascadiaFoundation)
  * [Telegram](https://t.me/+Tf6pQQSA7IkxNmU5)
  * [Turkish Telegram](https://t.me/CascadiaTR)
+
+### Bizi takip edin [Twitter](https://twitter.com/corenodeHQ)
+### Topluluğumuza katılın [Telegram](https://t.me/corenodechat)
