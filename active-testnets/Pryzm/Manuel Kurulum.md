@@ -16,11 +16,19 @@ echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.bash_profile &
 rm -rf go1.20.4.linux-amd64.tar.gz
 ```
 ## Binary Kurulumu
+#### AMD64
 ```bash
 wget https://storage.googleapis.com/pryzm-zone/core/0.10.0/pryzmd-0.10.0-linux-amd64
 chmod +x pryzmd-0.10.0-linux-amd64
 mkdir -p $HOME/go/bin
 mv pryzmd-0.10.0-linux-amd64 $HOME/go/bin/pryzmd
+```
+#### ARM64
+```bash
+wget https://storage.googleapis.com/pryzm-zone/core/0.10.0/pryzmd-0.10.0-linux-arm64
+chmod +x pryzmd-0.10.0-linux-arm64
+mkdir -p $HOME/go/bin
+mv pryzmd-0.10.0-linux-arm64pryzmd $HOME/go/bin/pryzmd
 ```
 ## İnitalize
 ```bash
