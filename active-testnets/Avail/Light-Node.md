@@ -142,3 +142,7 @@ sudo systemctl restart availd.service
 ```
 journalctl -u availd -fo cat
 ```
+
+
+### Bizi takip edin [Twitter](https://twitter.com/corenodeHQ)
+### Topluluğumuza katılın [Telegram](https://t.me/corenodechat)
