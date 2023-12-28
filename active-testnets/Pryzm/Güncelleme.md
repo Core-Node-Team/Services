@@ -19,7 +19,8 @@ curl -sSL -o update-0.10.0.sh https://raw.githubusercontent.com/Core-Node-Team/s
 #### Screenden çıkabilirsiniz `CTRL A D` ile
 
 #### Tamamladıktan sonra scripti silebilirsiniz `rm update-0.10.0.sh`
-### Manuel güncellemek için 316000.bloğa geldiğinde
+### Manuel güncellemek için
+* 316000.bloğa geldiğinde
 ```
 systemctl stop pryzmd
 wget https://storage.googleapis.com/pryzm-zone/core/0.10.0/pryzmd-0.10.0-linux-amd64
