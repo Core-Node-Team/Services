@@ -15,3 +15,5 @@ mv $HOME/.arkeod/priv_validator_state.json.backup $HOME/.arkeod/data/priv_valida
 
 sudo systemctl start arkeod && sudo journalctl -u arkeod -fo cat
 ```
+### Bizi takip edin [Twitter](https://twitter.com/corenodeHQ)
+### Topluluğumuza katılın [Telegram](https://t.me/corenodechat)
