@@ -12,3 +12,7 @@
 * [Docs](https://docs.pryzm.zone/)
 * [Medium](https://pryzm.medium.com/)
 * [Telegram](https://t.me/pryzm\_zone)
+
+
+### Bizi takip edin [Twitter](https://twitter.com/corenodeHQ)
+### Topluluğumuza katılın [Telegram](https://t.me/corenodechat)
