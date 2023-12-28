@@ -12,6 +12,7 @@
 * [Docs](https://docs.arkeo.network/)
 * [Github](https://github.com/arkeonetwork)
 
-
+### Bizi takip edin [Twitter](https://twitter.com/corenodeHQ)
+### Topluluğumuza katılın [Telegram](https://t.me/corenodechat)
 
 
