@@ -6,3 +6,6 @@
 * [Website](https://www.availproject.org/)
 * [Docs](https://docs.availproject.org/clash-of-nodes/challenges/)
 * [Github](https://github.com/availproject/avail/releases)
+
+### Bizi takip edin [Twitter](https://twitter.com/corenodeHQ)
+### Topluluğumuza katılın [Telegram](https://t.me/corenodechat)
