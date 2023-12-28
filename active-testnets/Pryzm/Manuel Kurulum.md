@@ -20,7 +20,7 @@ rm -rf go1.20.4.linux-amd64.tar.gz
 wget https://storage.googleapis.com/pryzm-zone/core/0.10.0/pryzmd-0.10.0-linux-amd64
 chmod +x pryzmd-0.10.0-linux-amd64
 mkdir -p $HOME/go/bin
-mv pryzmd-0.10.0-linux-amd64 $HOME/go/bin
+mv pryzmd-0.10.0-linux-amd64 $HOME/go/bin/pryzmd
 ```
 ## İnitalize
 ```bash
