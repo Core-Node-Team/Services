@@ -15,3 +15,5 @@ mv $HOME/.althea/priv_validator_state.json.backup $HOME/.althea/data/priv_valida
 
 sudo systemctl start althea && sudo journalctl -u althea -fo cat
 ```
+### Bizi takip edin [Twitter](https://twitter.com/corenodeHQ)
+### Topluluğumuza katılın [Telegram](https://t.me/corenodechat)
