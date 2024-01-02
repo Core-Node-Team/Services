@@ -52,3 +52,6 @@
   * [Block Producer](active-testnets/Mina-Testworld-2/BlockProducer.md)
     * [Upgrade-rampup6](active-testnets/Mina-Testworld-2/Upgrade-rampup6.md)
 * [Pactus-Testnet](active-testnets/Pactus/Kurulum.md)
+* [NuLink-Horus 2.0](active-testnets/Nulink-Horus2.0/readme.md)
+  * [Kurulum](active-testnets/Nulink-Horus2.0/Kurulum.md)
+ 
