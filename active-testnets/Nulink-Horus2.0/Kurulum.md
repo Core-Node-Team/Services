@@ -139,6 +139,9 @@ nulink/nulink nulink ursula init \
 ### Başlatma
 Not: bişi değişmiyor aynen convaynen.
 ```
+ufw allow 9151
+```
+```
 docker run --restart on-failure -d \
 --name ursula \
 -p 9151:9151 \
