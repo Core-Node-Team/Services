@@ -9,7 +9,7 @@ cp $HOME/.althea/data/priv_validator_state.json $HOME/.althea/priv_validator_sta
 
 althea tendermint unsafe-reset-all --home $HOME/.althea --keep-addr-book
 
-curl -L http://37.120.189.81/althea_testnet/althea_snap.tar.lz4 | tar -I lz4 -xf - -C /.althea
+curl -L http://37.120.189.81/althea_testnet/althea_snap.tar.lz4 | tar -I lz4 -xf - -C $HOME/.althea
 
 mv $HOME/.althea/priv_validator_state.json.backup $HOME/.althea/data/priv_validator_state.json
 
