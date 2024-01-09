@@ -72,7 +72,7 @@ sed -i -e "s%^address = \"tcp://localhost:1317\"%address = \"tcp://localhost:${C
 ```bash
 sudo apt install liblz4-tool -y
 
-curl -L http://37.120.189.81/elys_testnet/elys_snap.tar.lz4 | tar -I lz4 -xf - -C /.elysd
+curl -L http://37.120.189.81/elys_testnet/elys_snap.tar.lz4 | tar -I lz4 -xf - -C $HOME/.elysd
 ```
 
 ### Create Service
