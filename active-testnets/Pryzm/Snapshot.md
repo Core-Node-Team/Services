@@ -9,7 +9,7 @@ cp $HOME/.pryzm/data/priv_validator_state.json $HOME/.pryzm/priv_validator_state
 
 pryzmd tendermint unsafe-reset-all --home $HOME/.pryzm --keep-addr-book
 
-curl -L http://37.120.189.81/pryzm_testnet/pryzm_snap.tar.lz4 | tar -I lz4 -xf - -C .pryzm
+curl -L http://37.120.189.81/pryzm_testnet/pryzm_snap.tar.lz4 | tar -I lz4 -xf - -C $HOME/.pryzm
 
 mv $HOME/.pryzm/priv_validator_state.json.backup $HOME/.pryzm/data/priv_validator_state.json
 
