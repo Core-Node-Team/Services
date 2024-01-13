@@ -26,6 +26,11 @@ artelad keys add wallet
 
 Go to Arkeo [Discord](https://discord.gg/TzmnmuCU) and get tokens from **#faucet** with `$request wallet-address`
 
+### Not: Learn Address (EIP-55): This is pencil :D
+```
+artelad debug addr art-adress
+```
+
 #### Check Sync Status
 
 * Should return _<mark style="color:green;">**False**</mark>_
