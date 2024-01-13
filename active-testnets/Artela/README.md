@@ -10,5 +10,11 @@
  * [Artela Tüm Linkler](https://linktr.ee/artela_network)
  * [Artela EXPLORER](https://test.explorer.ist/artela/staking)
 
+> ### Artela Blockchain, geliştiricilerin kullanıcı tanımlı yerel uzantılar eklemesine ve zengin özelliklere sahip dApp’ler oluşturmasına olanak tanıyan bir layer-1 ağıdır.
+
+> ### Esnek Blok Alanı tasarımıyla EVM eşdeğerliğinin, etki alanları arası birlikte çalışabilirliğin ve sınırsız ölçeklenebilirliğin ötesine geçen genişletilebilirlik sunar.
+
+> ### Aspect’lerle donatılmış ilk layer-1 ağı olan Artela ağı, Aspect’in değerini en üst düzeye çıkarmayı ve geliştiricileri
+
 ### Bizi takip edin [Twitter](https://twitter.com/corenodeHQ)
 ### Topluluğumuza katılın [Telegram](https://t.me/corenodechat)
