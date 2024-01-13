@@ -9,7 +9,7 @@
 
 ## For automatic installation, enter this command and follow the instructions
 ```bash
-curl -sSL -o artela.sh https://raw.githubusercontent.com/Core-Node-Team/scripts/main/artela/install.sh && chmod +x arkeo.sh && bash ./artela.sh && source $HOME/.bash_profile && rm artela.sh
+curl -sSL -o artela.sh https://raw.githubusercontent.com/Core-Node-Team/scripts/main/artela/install.sh && chmod +x artela.sh && bash ./artela.sh && source $HOME/.bash_profile && rm artela.sh
 ```
 ## For manuel installation follow this [guide](manuel-install.md)
 
