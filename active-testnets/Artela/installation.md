@@ -68,7 +68,7 @@ artelad tx staking create-validator \
 artelad q staking validator $(artelad keys show wallet --bech val -a)
 ```
 
-### <mark style="color:purple;">Yes, You Are Now A Validator On The Arkeo Network</mark>
+### <mark style="color:purple;">Yes, You Are Now A Validator On The Artela Network</mark>
 
 #### Don't Forget to save priv validator key
 
