@@ -13,6 +13,8 @@ curl -sSL -o artela.sh https://raw.githubusercontent.com/Core-Node-Team/scripts/
 ```
 ## For manuel installation follow this [guide](manuel-install.md)
 
+## Başvuur formu : [TIKLA](https://t.co/EPAoUcWriG)https://t.co/EPAoUcWriG
+
 ## Become A Validator
 
 ### Create Keyring
@@ -61,6 +63,7 @@ artelad tx staking create-validator \
 --node http://localhost:31757 \
 -y
 ```
+
 
 #### Make sure you see the validator details and check
 
