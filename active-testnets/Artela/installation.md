@@ -13,7 +13,7 @@ curl -sSL -o artela.sh https://raw.githubusercontent.com/Core-Node-Team/scripts/
 ```
 ## For manuel installation follow this [guide](manuel-install.md)
 
-## Başvuur formu : [TIKLA](https://t.co/EPAoUcWriG)
+## Başvuru formu : [TIKLA](https://t.co/EPAoUcWriG)
 
 ## Become A Validator
 
