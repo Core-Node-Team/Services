@@ -18,10 +18,11 @@ rm -rf go1.20.4.linux-amd64.tar.gz
 ## Binary Kurulumu
 #### AMD64
 ```bash
-wget https://storage.googleapis.com/pryzm-zone/core/0.10.0/pryzmd-0.10.0-linux-amd64
-chmod +x pryzmd-0.10.0-linux-amd64
+wget https://storage.googleapis.com/pryzm-zone/core/0.11.1/pryzmd-0.11.1-linux-amd64?checksum=sha256:92d6fc71dfb49f355881915a14a8d9b5a11ac41ab89b6873191e0a56c9be4ce2
+chmod +x pryzmd-0.11.1-linux-amd64?checksum=sha256:92d6fc71dfb49f355881915a14a8d9b5a11ac41ab89b6873191e0a56c9be4ce2
+mv pryzmd-0.11.1-linux-amd64?checksum=sha256:92d6fc71dfb49f355881915a14a8d9b5a11ac41ab89b6873191e0a56c9be4ce2 pryzmd
 mkdir -p $HOME/go/bin
-mv pryzmd-0.10.0-linux-amd64 $HOME/go/bin/pryzmd
+mv pryzmd $HOME/go/bin/pryzmd
 ```
 #### ARM64
 ```bash
