@@ -11,6 +11,22 @@
 ```bash
 curl -sSL -o artela.sh https://raw.githubusercontent.com/Core-Node-Team/scripts/main/artela/install.sh && chmod +x artela.sh && bash ./artela.sh && source $HOME/.bash_profile && rm artela.sh
 ```
+
+### Güncelleme
+```
+cd $HOME
+systemctl stop artelad
+rm -rf artela
+git clone https://github.com/artela-network/artela
+cd artela
+git checkout v0.4.7-rc6
+make install
+sed -E 's/^pool-size[[:space:]]*=[[:space:]]*[0-9]+$/apply-pool-size = 10\nquery-pool-size = 30/' ~/.artelad/config/app.toml > ~/.artelad/config/temp.app.toml && mv ~/.artelad/config/temp.app.toml ~/.artelad/config/app.toml
+sudo systemctl restart artelad && sudo journalctl -u artelad -fo cat
+```
+
+
+
 ## For manuel installation follow this [guide](manuel-install.md)
 
 ## Başvuru formu : [TIKLA](https://t.co/EPAoUcWriG)
