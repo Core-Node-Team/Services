@@ -92,7 +92,7 @@ pryzmd tx staking delegate <VALOPER_ADRESİ> 1000000upryzm --from wallet --chain
 ```
 ## Kendi Validatörüne Delegate
 ```
-pryzmd tx staking delegate $(pryzmd keys show wallet --bech val -a) 1000000upryzm --from wallet --chain-id indigo-1 --gas-adjustment 1.5 --gas auto ---gas-prices 0.015upryzm -y
+pryzmd tx staking delegate $(pryzmd keys show wallet --bech val -a) 1000000upryzm --from wallet --chain-id indigo-1 --gas-adjustment 1.5 --gas auto --gas-prices 0.015upryzm -y
 ```
 ## Redelegate
 ```
