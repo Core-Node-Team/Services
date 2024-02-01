@@ -102,7 +102,7 @@ curl -o - -L http://37.120.189.81/avail/avail.tar.lz4 | lz4 -c -d - | tar -x -C 
 
 
 ```
-systemctl daemon-reload && systemctl restart availd && journalctl -u availd -fo cat
+systemctl daemon-reload && sudo systemctl enable availd.service && systemctl restart availd && journalctl -u availd -fo cat
 ```
 
 👉Not: başlangıcta sürümün 1.10 olduğunu görün bele
