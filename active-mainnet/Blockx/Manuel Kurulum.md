@@ -131,7 +131,7 @@ curl -L http://37.120.189.81/blockx_mainnet/blockx_snap.tar.lz4 | tar -Ilz4 -xf 
 ```
 ### Start Service
 ```
-systemctl daemon-reload && sudo systemctl start blockx && journalctl -u blockxd -fo cat
+systemctl daemon-reload && sudo systemctl restart blockxd && journalctl -u blockxd -fo cat
 ```
 
 
