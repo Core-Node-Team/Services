@@ -9,7 +9,7 @@
     * [Manuel Kurulum](<active-mainnet/Router/Manuel Kurulum.md>)
   * [Snapshot](active-mainnet/Router/snapshot.md)
   * [Yararlı Komutlar](active-mainnet/Router/yararlı-komutlar.md)
-* [Blockx](active-mainnet/Blockx/Readme.md)
+* [Blockx](active-mainnet/Blockx/README.md)
   * [Kurulum](active-mainnet/Blockx/Kurulum.md)
     * [Manuel Kurulum](<active-mainnet/Blockx/Manuel Kurulum.md>)
   * [Snapshot](active-mainnet/Blockx/snapshot.md)
