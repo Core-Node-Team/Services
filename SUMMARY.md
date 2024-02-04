@@ -2,6 +2,24 @@
 
 * [Core Node Team](README.md)
 
+## Active Mainnet
+
+* [Router](active-mainnet/Router/Readme.md)
+  * [Kurulum](active-mainnet/Router/Kurulum.md)
+    * [Manuel Kurulum](active-mainnet/Router/Manuel Kurulum.md)
+  * [Snapshot](active-mainnet/Router/snapshot.md)
+  * [Yararlı Komutlar](active-mainnet/Router/yararlı-komutlar.md)
+* [Blockx](active-mainnet/Blockx/Readme.md)
+  * [Kurulum](active-mainnet/Blockx/Kurulum.md)
+    * [Manuel Kurulum](active-mainnet/Blockx/Manuel Kurulum.md)
+  * [Snapshot](active-mainnet/Blockx/snapshot.md)
+  * [Yararlı Komutlar](active-mainnet/Blockx/yararlı-komutlar.md)
+* [Quicksilver](active-mainnet/Quicksilver/Readme.md)
+  * [Kurulum](active-mainnet/Quicksilver/Kurulum.md)
+    * [Manuel Kurulum](active-mainnet/Quicksilver/Manuel Kurulum.md)
+  * [Snapshot](active-mainnet/Quicksilver/snapshot.md)
+  * [Yararlı Komutlar](active-mainnet/Quicksilver/yararlı-komutlar.md)
+
 ## Active Testnets
 
 * [Althea](active-testnets/Althea/Readme.md)
@@ -61,20 +79,4 @@
 * [NuLink-Horus 2.0](active-testnets/Nulink-Horus2.0/readme.md)
   * [Kurulum](active-testnets/Nulink-Horus2.0/Kurulum.md)
  
-## Active Mainnet
 
-* [Router](active-mainnet/Router/Readme.md)
-  * [Kurulum](active-mainnet/Router/Kurulum.md)
-    * [Manuel Kurulum](active-mainnet/Router/Manuel Kurulum.md)
-  * [Snapshot](active-mainnet/Router/snapshot.md)
-  * [Yararlı Komutlar](active-mainnet/Router/yararlı-komutlar.md)
-* [Blockx](active-mainnet/Blockx/Readme.md)
-  * [Kurulum](active-mainnet/Blockx/Kurulum.md)
-    * [Manuel Kurulum](active-mainnet/Blockx/Manuel Kurulum.md)
-  * [Snapshot](active-mainnet/Blockx/snapshot.md)
-  * [Yararlı Komutlar](active-mainnet/Blockx/yararlı-komutlar.md)
-* [Quicksilver](active-mainnet/Quicksilver/Readme.md)
-  * [Kurulum](active-mainnet/Quicksilver/Kurulum.md)
-    * [Manuel Kurulum](active-mainnet/Quicksilver/Manuel Kurulum.md)
-  * [Snapshot](active-mainnet/Quicksilver/snapshot.md)
-  * [Yararlı Komutlar](active-mainnet/Quicksilver/yararlı-komutlar.md)
