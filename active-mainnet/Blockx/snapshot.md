@@ -7,7 +7,7 @@ systemctl stop blockxd
 
 cp $HOME/.blockxd/data/priv_validator_state.json $HOME/.blockxd/priv_validator_state.json.backup
 
-babylond tendermint unsafe-reset-all --home $HOME/.blockxd --keep-addr-book
+blockxd tendermint unsafe-reset-all --home $HOME/.blockxd --keep-addr-book
 
 curl -L http://37.120.189.81/blockx_mainnet/blockx_snap.tar.lz4 | tar -I lz4 -xf - -C $HOME/.blockxd
 
