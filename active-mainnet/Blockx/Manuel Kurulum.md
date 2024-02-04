@@ -17,7 +17,10 @@ BlockX Network is a next-gen Ethereum alternative with multi-chain support and d
 ### Topluluğumuza katılın [Telegram](https://t.me/corenodechat)
 
 
+<table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Latest Version</th><th align="center">Custom Port</th></tr></thead><tbody><tr><td align="center"><mark style="color:orange;">blockx_100-1</mark></td><td align="center"><mark style="color:green;">c940d186c0d118ea017f6abc00225fdd9b26fe14</mark></td><td align="center"><mark style="color:yellow;">122</mark></td></tr></tbody></table>
 
+> ## Hardware Requirements
+<table data-header-hidden data-full-width="false"><thead><tr><th width="247">Hardware Requirements</th><th></th></tr></thead><tbody><tr><td>Minimum</td><td>8CPU 32RAM 500GB</td></tr><tr><td>Recommended</td><td>16CPU 64RAM 500GB</td></tr></tbody></table>
 
 ### Update
 ```
