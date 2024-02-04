@@ -62,3 +62,9 @@
   * [Kurulum](active-testnets/Nulink-Horus2.0/Kurulum.md)
  
 ## Active Mainnet
+
+* [Router](active-mainnet/Router/Readme.md)
+  * [Kurulum](active-mainnet/Router/Kurulum.md)
+    * [Manuel Kurulum](active-mainnet/Router/Manuel Kurulum.md)
+  * [Snapshot](active-mainnet/Router/snapshot.md)
+  * [Yararlı Komutlar](active-mainnet/Router/yararlı-komutlar.md)
