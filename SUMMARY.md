@@ -22,6 +22,10 @@
 
 ## Active Testnets
 
+* [Crossfi](active-testnets/Crossfi-Testnet/Readme.md)
+  * [Kurulum](active-testnets/Crossfi-Testnet/Kurulum.md)
+  * [Snapshot](active-testnets/Crossfi-Testnet/snapshot.md)
+  * [Yararlı Komutlar](active-testnets/Crossfi-Testnet/yararlı-komutlar.md)
 * [Althea](active-testnets/Althea/Readme.md)
   * [Kurulum](active-testnets/Althea/Kurulum.md)
     * [Manuel Kurulum](<active-testnets/Althea/Manuel Kurulum.md>)
