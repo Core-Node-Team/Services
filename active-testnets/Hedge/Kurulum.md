@@ -39,14 +39,7 @@ echo "export PATH=$PATH:/usr/local/go/bin:~/go/bin" >> ~/.bash_profile
 source $HOME/.bash_profile
 [ ! -d ~/go/bin ] && mkdir -p ~/go/bin
 ```
-### 🚧Varyasyon atama - cüzdan adını ve moniker adını değiştirin.
-```
-echo "export WALLET="wallet"" >> $HOME/.bash_profile
-echo "export MONIKER="Adını-yaz"" >> $HOME/.bash_profile
-echo "export SIDE_CHAIN_ID="side-testnet-1"" >> $HOME/.bash_profile
-echo "export SIDE_PORT="48"" >> $HOME/.bash_profile
-source $HOME/.bash_profile
-```
+
 ### 🚧Dosyaları çekelim ve kuralım
 ```
 sudo wget -O hedged https://github.com/hedgeblock/testnets/releases/download/v0.1.0/hedged_linux_amd64_v0.1.0
@@ -108,6 +101,14 @@ EOF
 ```
 sudo systemctl daemon-reload
 sudo systemctl enable hedged
+```
+### Port
+```
+CUSTOM_PORT=118
+```
+```
+sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}58\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}57\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}60\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}56\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}66\"%" $HOME/.hedge/config/config.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTOM_PORT}17\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}80\"%; s%^address = \"localhost:9090\"%address = \"0.0.0.0:${CUSTOM_PORT}90\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CUSTOM_PORT}91\"%" $HOME/.hedge/config/app.toml
 ```
 ### 🚧 Snap
 ```
