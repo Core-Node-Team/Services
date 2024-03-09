@@ -50,16 +50,17 @@ set -eux; \
   wget -O /lib/libwasmvm.x86_64.so https://github.com/CosmWasm/wasmvm/releases/download/v1.3.0/libwasmvm.x86_64.so
 ```
 ### 🚧 İnit işlemi
+
+```
+sudo wget -O $HOME/.hedge/config/genesis.json "http://37.120.189.81/hedge_tesnet/genesis.json"
+sudo wget -O $HOME/.hedge/config/addrbook.json "http://37.120.189.81/hedge_tesnet/addrbook.json"
+```
 ```
 hedged config chain-id berberis-1
 hedged config keyring-backend test
 ```
 ```
 hedged init "Moniker" --chain-id berberis-1
-```
-```
-sudo wget -O $HOME/.hedge/config/genesis.json "http://37.120.189.81/hedge_tesnet/genesis.json"
-sudo wget -O $HOME/.hedge/config/addrbook.json "http://37.120.189.81/hedge_tesnet/addrbook.json"
 ```
 ### 🚧 Gas ayarları
 ```
