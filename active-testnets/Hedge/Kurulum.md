@@ -52,8 +52,8 @@ set -eux; \
 ### 🚧 İnit işlemi
 
 ```
-sudo wget -O $HOME/.hedge/config/genesis.json "http://37.120.189.81/hedge_tesnet/genesis.json"
-sudo wget -O $HOME/.hedge/config/addrbook.json "http://37.120.189.81/hedge_tesnet/addrbook.json"
+sudo wget -O $HOME/.hedge/config/genesis.json "http://37.120.189.81/hedge_testnet/genesis.json"
+sudo wget -O $HOME/.hedge/config/addrbook.json "http://37.120.189.81/hedge_testnet/addrbook.json"
 ```
 ```
 hedged config chain-id berberis-1
