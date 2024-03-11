@@ -12,3 +12,7 @@
  * [Blockchain Explorer](https://explorer.nodestake.org/hedge-testnet)<br>
  * [Discord](https://discord.gg/HMVhE7recm)<br>
  * [Twitter](https://twitter.com/hedgeblockio)<br>
+
+
+### Bizi takip edin [Twitter](https://twitter.com/corenodeHQ)
+### Topluluğumuza katılın [Telegram](https://t.me/corenodechat)
