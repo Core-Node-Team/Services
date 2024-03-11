@@ -23,3 +23,5 @@
 | RAM	| 8+ GB |
 | Storage	| 400 GB SSD |
 
+### Bizi takip edin [Twitter](https://twitter.com/corenodeHQ)
+### Topluluğumuza katılın [Telegram](https://t.me/corenodechat)
