@@ -19,6 +19,7 @@
     * [Manuel Kurulum](<active-mainnet/Quicksilver/Manuel Kurulum.md>)
   * [Snapshot](active-mainnet/Quicksilver/snapshot.md)
   * [Yararlı Komutlar](active-mainnet/Quicksilver/yararlı-komutlar.md)
+  * [Update](active-mainnet/Quicksilver/Update.md)
 
 ## Active Testnets
 
