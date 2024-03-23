@@ -24,9 +24,23 @@ rm -rf go1.20.4.linux-amd64.tar.gz
 ### Install Binary
 
 ```bash
+ROCKSDB_VERSION=8.9.1
+sudo apt install -y libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev liblz4-dev libzstd-dev
+cd /tmp
+wget https://github.com/facebook/rocksdb/archive/refs/tags/v${ROCKSDB_VERSION}.tar.gz
+tar -xvf v${ROCKSDB_VERSION}.tar.gz && cd rocksdb-${ROCKSDB_VERSION} || return
+export CXXFLAGS='-Wno-error=deprecated-copy -Wno-error=pessimizing-move -Wno-error=class-memaccess'
+make shared_lib
+sudo make install-shared INSTALL_PATH=/usr
+rm -rf /tmp/rocksdb-${ROCKSDB_VERSION} /tmp/v${ROCKSDB_VERSION}.tar.gz
+export LD_LIBRARY_PATH=/usr/local/lib
+cd $HOME
+rm -rf elys
 git clone https://github.com/elys-network/elys.git
 cd elys
-git checkout v0.24.0
+git checkout build/rocksdb
+git tag v0.29.26 -d
+git tag v0.29.26
 make install
 ```
 
@@ -80,18 +94,21 @@ curl -L http://37.120.189.81/elys_testnet/elys_snap.tar.lz4 | tar -I lz4 -xf - -
 ```bash
 sudo tee /etc/systemd/system/elysd.service > /dev/null <<EOF
 [Unit]
-Description=Elys Node
+Description=Elys node
 After=network-online.target
 [Service]
 User=$USER
-ExecStart=$(which elysd) start --home $HOME/.elys
+WorkingDirectory=$HOME/.elys
+ExecStart=$(which elysd) start --minimum-gas-prices="0.0018ibc/2180E84E20F5679FCC760D8C165B60F42065DEF7F46A72B447CFF1B7DC6C0A65,0.00025ibc/E2D2F6ADCC68AA3384B2F5DFACCA437923D137C14E86FB8A10207CF3BED0C8D4,0.00025uelys" --home $HOME/.elys
 Restart=on-failure
-RestartSec=3
+RestartSec=5
 LimitNOFILE=65535
+Environment="LD_LIBRARY_PATH=/usr/local/lib"
 [Install]
 WantedBy=multi-user.target
 EOF
-
+```
+```
 sudo systemctl daemon-reload
 sudo systemctl enable elysd
 ```
