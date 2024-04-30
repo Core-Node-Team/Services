@@ -12,9 +12,15 @@
  * [Topluluk kanalımız](https://t.me/corenodechat)<br>
  * [Topluluk Twitter](https://twitter.com/corenodeHQ)<br>
  * [Warden Website](https://wardenprotocol.org/)<br>
- * [Blockchain Explorer](https://warden-explorer.paranorm.pro/warden/block)<br>
- * [Discord](https://discord.gg/gbPAKUhH)<br>
+ * [Blockchain Explorer](https://explorer.corenodehq.com/Warden%20Testnet)<br>
+ * [Discord](https://discord.gg/7rzkxXRK)<br>
  * [Twitter](https://twitter.com/wardenprotocol)<br>
+
+ ### Public RPC
+
+https://warden-testnet-api.corenode.info/
+
+https://warden-testnet-rpc.corenode.info/
 
 ## 💻 Sistem Gereksinimleri
 | Bileşenler | Minimum Gereksinimler | 
@@ -44,12 +50,14 @@ source $HOME/.bash_profile
 ```
 
 ### 🚧 Dosyaları çekelim ve kuralım
+
 ```
 cd $HOME
 mkdir -p $HOME/.warden/cosmovisor/genesis/bin
-git clone --depth 1 --branch v0.1.0 https://github.com/warden-protocol/wardenprotocol/
-cd  wardenprotocol/warden/cmd/wardend
-go build
+wget https://github.com/warden-protocol/wardenprotocol/releases/download/v0.3.0/wardend_Linux_x86_64.zip
+unzip wardend_Linux_x86_64.zip
+rm -rf wardend_Linux_x86_64.zip
+chmod +x wardend
 ```
 ```
 mv wardend $HOME/.warden/cosmovisor/genesis/bin/
@@ -89,12 +97,12 @@ sudo systemctl enable wardend
 ```
 ### 🚧 İnit
 ```
-wardend init "CoreNode" --chain-id alfama
+wardend init "isim-yaz" --chain-id buenavista-1
 ```
 ### 🚧 Genesis addrbook
 ```
-wget -O $HOME/.warden/config/genesis.json "http://37.120.189.81/warden_testnet/genesis.json"
-wget -O $HOME/.warden/config/addrbook.json "http://37.120.189.81/warden_testnet/addrbook.json"
+wget -O $HOME/.warden/config/genesis.json "https://raw.githubusercontent.com/Core-Node-Team/Testnet-TR/main/Warden-buenavista/genesis.json"
+wget -O $HOME/.warden/config/addrbook.json "https://raw.githubusercontent.com/Core-Node-Team/Testnet-TR/main/Warden-buenavista/addrbook.json"
 ```
 ### 🚧 Gas ayarı
 ```
@@ -102,31 +110,26 @@ sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0025uward\"/;
 ```
 ### 🚧 Peer
 ```
-peers="6a8de92a3bb422c10f764fe8b0ab32e1e334d0bd@sentry-1.alfama.wardenprotocol.org:26656,7560460b016ee0867cae5642adace5d011c6c0ae@sentry-2.alfama.wardenprotocol.org:26656,24ad598e2f3fc82630554d98418d26cc3edf28b9@sentry-3.alfama.wardenprotocol.org:26656"
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.warden/config/config.toml
-```
-### 🚧 Seed
-```
-seeds=""
-sed -i.bak -e "s/^seeds =.*/seeds = \"$seeds\"/" $HOME/.warden/config/config.toml
+SEEDS="8288657cb2ba075f600911685670517d18f54f3b@warden-testnet-seed.itrocket.net:18656"
+PEERS="b14f35c07c1b2e58c4a1c1727c89a5933739eeea@warden-testnet-peer.itrocket.net:18656,61446070887838944c455cb713a7770b41f35ac5@37.60.249.101:26656,0be8cf6de2a01a6dc7adb29a801722fe4d061455@65.109.115.100:27060,dc0122e37c203dec43306430a1f1879650653479@37.27.97.16:26656,8288657cb2ba075f600911685670517d18f54f3b@65.108.231.124:18656"
+sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.warden/config/config.toml
 ```
 ### 🚧 Snap
 ```
-cd $HOME
-apt install lz4
-sudo systemctl stop wardend
-cp $HOME/.warden/data/priv_validator_state.json $HOME/.warden/priv_validator_state.json.backup
-rm -rf $HOME/.warden/data
-curl -o - -L http://37.120.189.81/warden_testnet/warden_snap.tar.lz4 | lz4 -c -d - | tar -x -C $HOME/.warden
-mv $HOME/.warden/priv_validator_state.json.backup $HOME/.warden/data/priv_validator_state.json
+wardend tendermint unsafe-reset-all --home $HOME/.warden
+if curl -s --head curl http://37.120.189.81/warden_testnet/warden_snap.tar.lz4 | head -n 1 | grep "200" > /dev/null; then
+  curl http://37.120.189.81/warden_testnet/warden_snap.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.warden
+    else
+  echo no have snap
+fi
 ```
 
 ### 🚧 Port ayarı
 ```
-CUSTOM_PORT=111
+CUSTOM_PORT=112
 
 sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}58\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}57\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}60\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}56\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}66\"%" $HOME/.warden/config/config.toml
-sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTOM_PORT}17\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}80\"%; s%^address = \"locaklhost:9090\"%address = \"0.0.0.0:${CUSTOM_PORT}90\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CUSTOM_PORT}91\"%" $HOME/.warden/config/app.toml
+sed -i -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTOM_PORT}17\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}80\"%; s%^address = \"localhost:9090\"%address = \"localhost:${CUSTOM_PORT}90\"%; s%^address = \"localhost:9091\"%address = \"localhost:${CUSTOM_PORT}91\"%" $HOME/.warden/config/app.toml
 ```
 ### 🚧 Başlatalım
 ```
@@ -144,7 +147,7 @@ Not: altaki kodu çalıştırdıktan sonra explorerden adresini arat bak gelmiş
 
 https://warden-explorer.paranorm.pro/warden/block
 ```
-curl --data '{"address": "cüzdan-adresi-yaz"}' https://faucet.alfama.wardenprotocol.org
+curl --data '{"address": "cüzdan-adresi-yaz"}' https://faucet.buenavista.wardenprotocol.org
 ```
 ### 🚧 Validator Olusturma
 Not: altaki kodla pubkey öğren
@@ -153,8 +156,9 @@ wardend comet show-validator
 ```
 Not: öğrendiğin pubkeyi aşağıda nano ile içine akataracağın yere yazıcan
 ```
-nano /root/wardenprotocol/validator.json
+nano /root/validator.json
 ```
+NOT: baska bele validator olusturmalı proje kuruluysa içi dolu olabilir. önemli değil zaten bikere kullanıyoruz sil bastan ekle yok sa zaten içi boş
 ```
 {
         "pubkey": pubyaz,
@@ -169,17 +173,94 @@ nano /root/wardenprotocol/validator.json
         "commission-max-change-rate": "0.01",
         "min-self-delegation": "1"
 }
-
 ```
 Not: ctrl xy enter kaydet çık.
 ### Validator olusturucaz ama eşleşmesini beklemeniz gerek....
 ```
-wardend tx staking create-validator /root/wardenprotocol/validator.json \
+wardend tx staking create-validator /root/validator.json \
     --from=cüzdan-adi \
-    --chain-id=alfama \
+    --chain-id=buenavista-1 \
     --fees=500uward \
-    --node=http://localhost:11157
+    --node=http://localhost:11257
+```
+### oto validator olusturma yukardaki ile yapamadıysız deneyin
+```
+cd $HOME
+```
+# Create validator.json file
+```
+echo "{\"pubkey\":{\"@type\":\"/cosmos.crypto.ed25519.PubKey\",\"key\":\"$(wardend comet show-validator | grep -Po '\"key\":\s*\"\K[^"]*')\"},
+    \"amount\": \"1000000uward\",
+    \"moniker\": \"nodeismin\",
+    \"identity\": \"keybasecode\",
+    \"website\": \"\",
+    \"security\": \"\",
+    \"details\": \"details\",
+    \"commission-rate\": \"0.1\",
+    \"commission-max-rate\": \"0.2\",
+    \"commission-max-change-rate\": \"0.01\",
+    \"min-self-delegation\": \"1\"
+}" > validator.json
+```
+# Create a validator using the JSON configuration
+```
+wardend tx staking create-validator validator.json \
+    --from cuzdanismin \
+    --chain-id buenavista-1 \
+    --gas auto --gas-adjustment 1.5 --fees 600uward \
+    --node=http://localhost:11257
 ```
 
+
+### Delege 
+```
+wardend tx staking delegate valoper-adresi miktar000000uward \
+--chain-id buenavista-1 \
+--from "cüzdan-adi" \
+--fees 500uward \
+--node=http://localhost:11257
+```
+
+### OTO faucet isteme 
+NOT: ayrıca platformdadan keplerle alabilirsiniz : https://spaceward.buenavista.wardenprotocol.org/
+NOT: cüzdan adresi yazın
+```
+screen -S faucet
+```
+```
+nano script.sh
+```
+```
+#!/bin/bash
+
+# Sonsuz döngü başlat
+while true; do
+  # Komutunuzu burada çalıştırın
+  /usr/bin/curl --data '{"address":"cüzdan-adresi-yaz"}' https://faucet.buenavista.wardenprotocol.org/
+
+  # 12 saat (43200 saniye) bekleyin
+  sleep 43200
+done
+```
+
+- cttl y x enter
+```
+chmod +x script.sh
+```
+```
+./script.sh
+```
+- CRTL+A D  bas çık
+
+
+### Komple Silme
+```
+sudo systemctl stop wardend
+sudo systemctl disable wardend
+sudo rm -rf /etc/systemd/system/wardend.service
+sudo rm $(which wardend)
+sudo rm -rf $HOME/.warden
+sed -i "/WARDEN_/d" $HOME/.bash_profile
+```
 
 
