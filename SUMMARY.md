@@ -48,6 +48,8 @@
   * [Light-Node](active-testnets/Avail/Light-Node.md)
   * [Madara Rollapp](active-testnets/Avail/madara.md)
   * [DYM Rollapp](active-testnets/Avail/rollapp.md)
+* [Avail-Turing](active-testnets/Avail-Turing/readme.md)
+  * [Snapshot](active-testnets/Avail-Turing/snap.md)
 * [Arkeo](active-testnets/Arkeo/README.md)
   * [Installation](active-testnets/Arkeo/installation.md)
     * [Manuel Installation](active-testnets/Arkeo/manuel-install.md)
