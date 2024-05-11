@@ -50,6 +50,8 @@
   * [DYM Rollapp](active-testnets/Avail/rollapp.md)
 * [Avail-Turing](active-testnets/Avail-Turing/readme.md)
   * [Snapshot](active-testnets/Avail-Turing/snap.md)
+* [Airchains](active-testnets/Airchains/readme.md)
+  * [Snapshot](active-testnets/Airchains/snap.md)
 * [SIDE-S2](active-testnets/SIDE-S2/readme.md)
   * [Migrate](active-testnets/SIDE-S2/migrate.md)
   * [Snap](active-testnets/SIDE-S2/snap.md)
