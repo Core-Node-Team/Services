@@ -21,6 +21,11 @@ API : https://airchains-testnet-api.corenode.info/
 
 GRPC : https://airchains-testnet-grpc.corenode.info/
 
+
+### Explorer
+
+https://explorer.corenodehq.com/Airchains-Testnet.
+
 ## 💻 Sistem Gereksinimleri
 | Bileşenler | Minimum Gereksinimler | 
 | ------------ | ------------ |
