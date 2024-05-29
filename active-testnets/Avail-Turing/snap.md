@@ -22,6 +22,9 @@ sudo apt install snapd -y
 sudo snap install lz4 curl
 ```
 ```
+rm -rf $HOME/avail-node/data/chains/avail_turing_network/paritydb/
+```
+```
 curl -o - -L http://37.120.189.81/avail/avail_snap.tar.lz4 | lz4 -c -d - | tar -x -C /root/avail-node/data/chains/avail_turing_network
 ```
 
