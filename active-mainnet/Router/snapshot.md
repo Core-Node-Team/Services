@@ -1,5 +1,5 @@
 # Snap
-```
+```bash
 sudo apt install liblz4-tool
 
 systemctl stop routerd
