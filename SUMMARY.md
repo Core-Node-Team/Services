@@ -24,6 +24,7 @@
 * [ELYS](active-mainnet/elys/Readme.md)
 * [Warden](active-mainnet/warden/Readme.md)
 * [Avail](active-mainnet/Avail/Readme.md)
+* [CrossFi](active-mainnet/crossfi/Readme.md)
 
 
 ## Active Testnets
