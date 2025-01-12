@@ -4,8 +4,9 @@
 
 <table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Latest Version</th><th align="center">Custom Port</th></tr></thead><tbody><tr><td align="center"><mark style="color:orange;">ojo-devnet</mark></td><td align="center"><mark style="color:green;">HEAD-ad5a2377134aa13d7d76575b95613cf8ed12d1e4</mark></td><td align="center"><mark style="color:yellow;">312</mark></td></tr></tbody></table>
 
-> ## Hardware Requirements
-<table data-header-hidden data-full-width="false"><thead><tr><th width="247">Hardware Requirements</th><th> </th></tr></thead><tbody><tr><td>Minimum</td><td>4CPU 8RAM 100GB</td></tr><tr><td>Recommended</td><td>4CPU 16RAM 200GB</td></tr></tbody></table>
+> ### Hardware Requirements
+
+<table data-header-hidden data-full-width="false"><thead><tr><th width="247">Hardware Requirements</th><th></th></tr></thead><tbody><tr><td>Minimum</td><td>4CPU 8RAM 100GB</td></tr><tr><td>Recommended</td><td>4CPU 16RAM 200GB</td></tr></tbody></table>
 
 ### For automatic installation, enter this command and follow the instructions
 

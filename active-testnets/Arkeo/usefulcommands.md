@@ -3,7 +3,7 @@
 ##
 
 ## Key
- 
+
 ### Add New Key
 
 ```
@@ -21,6 +21,7 @@ arkeod keys add wallet --recover
 ```
 arkeod keys list
 ```
+
 ### Delete Keys
 
 ```
@@ -34,8 +35,9 @@ arkeod q bank balances $(arkeod keys show wallet -a)
 ```
 
 ## Validator
- 
+
 ### Create New Validator
+
 ```
 arkeod tx staking create-validator \
 --amount 1000000uarkeo \
@@ -104,7 +106,7 @@ arkeod q staking validators -oj --limit=3000 | jq '.validators[] | select(.statu
 ```
 
 ## Token
- 
+
 ### Send Token
 
 ```
@@ -153,8 +155,8 @@ arkeod tx distribution withdraw-all-rewards --from wallet --chain-id arkeo --gas
 arkeod tx distribution withdraw-rewards $(arkeod keys show wallet --bech val -a) --commission --from wallet --chain-id arkeo --gas-adjustment 1.5 --gas auto --gas-prices 0.1uarkeo -y
 ```
 
-## Governance 
- 
+## Governance
+
 ### List All Proposals
 
 ```
@@ -192,7 +194,7 @@ arkeod tx gov vote <ID> no_with_veto --from wallet --chain-id arkeo --gas-adjust
 ```
 
 ## Configuration Settings
- 
+
 ### Pruning
 
 ```
@@ -218,7 +220,7 @@ sed -i -e 's|^indexer *=.*|indexer = null|' $HOME/.arkeo/config/config.toml
 
 ### Change Default Port
 
-> ### CUSTOM_PORT=314
+> #### CUSTOM\_PORT=314
 
 ```
 sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}58\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}57\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}60\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}56\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}66\"%" $HOME/.arkeo/config/config.toml
@@ -244,7 +246,7 @@ arkeod tendermint unsafe-reset-all --keep-addr-book --home $HOME/.arkeo --keep-a
 ```
 
 ## Status And Control
- 
+
 ### Sync Status
 
 ```
@@ -288,7 +290,7 @@ curl -sS http://localhost:31457/net_info | jq -r '.result.peers[] | "\(.node_inf
 ```
 
 ## Service Management
- 
+
 Reload Service Configuration
 
 ```
@@ -338,7 +340,7 @@ sudo journalctl -u arkeod -f --no-hostname -o cat
 ```
 
 ## Remove Node
- 
+
 ```
 sudo systemctl stop arkeod && sudo systemctl disable arkeod && sudo rm /etc/systemd/system/arkeod.service && sudo systemctl daemon-reload && rm -rf $HOME/.arkeo && rm -rf $HOME/arkeo && sudo rm -rf $(which arkeod)
 ```

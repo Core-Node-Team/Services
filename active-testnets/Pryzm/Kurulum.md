@@ -4,7 +4,7 @@
 
 <table data-full-width="false"><thead><tr><th align="center">Chain-ID</th><th align="center">Son Versiyon</th><th align="center">Özel Port</th></tr></thead><tbody><tr><td align="center"><mark style="color:orange;">indigo-1</mark></td><td align="center"><mark style="color:green;">0.10.0</mark></td><td align="center"><mark style="color:yellow;">316</mark></td></tr></tbody></table>
 
-> ### Sistem Gereksinimleri
+> #### Sistem Gereksinimleri
 
 <table data-header-hidden data-full-width="false"><thead><tr><th width="247">Sistem Gereksinimleri</th><th></th></tr></thead><tbody><tr><td>Minimum</td><td>4CPU 8RAM 200GB</td></tr><tr><td>Tavsiye Edilen</td><td>8CPU 16RAM 1TB</td></tr></tbody></table>
 
@@ -75,5 +75,7 @@ pryzmd q staking validator $(pryzmd keys show wallet --bech val -a)
 ```bash
 cat $HOME/.pryzm/config/priv_validator_key.json
 ```
+
 ### Bizi takip edin [Twitter](https://twitter.com/corenodeHQ)
+
 ### Topluluğumuza katılın [Telegram](https://t.me/corenodechat)

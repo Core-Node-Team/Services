@@ -1,28 +1,34 @@
-<h1 align="center"> Side Protocol </h1>
+# SIDE-S2
 
+## Side Protocol
 
 ![image](https://github.com/Core-Node-Team/Testnet-TR/assets/91562185/00bf3951-733f-42d5-8f41-9bc67c06a6e8)
 
+* [Topluluk kanalımız](https://t.me/corenodechat)\
+
+* [Topluluk Twitter](https://twitter.com/corenodeHQ)\
+
+* [Side Website](https://side.one)\
+
+* [Blockchain Explorer](https://explorer.corenodehq.com/side/staking)\
+
+* [Discord](https://discord.gg/sideprotocol)\
+
+* [Twitter](https://twitter.com/SideProtocol)\
 
 
- * [Topluluk kanalımız](https://t.me/corenodechat)<br>
- * [Topluluk Twitter](https://twitter.com/corenodeHQ)<br>
- * [Side Website](https://side.one)<br>
- * [Blockchain Explorer](https://explorer.corenodehq.com/side/staking)<br>
- * [Discord](https://discord.gg/sideprotocol)<br>
- * [Twitter](https://twitter.com/SideProtocol)<br>
+### 💻 Sistem Gereksinimleri
 
-## 💻 Sistem Gereksinimleri
-| Bileşenler | Minimum Gereksinimler | 
-| ------------ | ------------ |
-| CPU |	4|
-| RAM	| 8+ GB |
-| Storage	| 400 GB SSD |
+| Bileşenler | Minimum Gereksinimler |
+| ---------- | --------------------- |
+| CPU        | 4                     |
+| RAM        | 8+ GB                 |
+| Storage    | 400 GB SSD            |
 
---------------
+***
 
+#### Daha once test1 kurduysanız.
 
-### Daha once test1 kurduysanız.
 ```
 sudo systemctl stop sided
 wget -O $HOME/.side/config/genesis.json https://raw.githubusercontent.com/molla202/Side/main/genesis.json
@@ -53,17 +59,20 @@ mv $HOME/.side/priv_validator_state.json.backup $HOME/.side/data/priv_validator_
 
 sudo systemctl restart sided && sudo journalctl -u sided -fo cat
 ```
-# FAUCET
+
+## FAUCET
 
 https://testnet.side.one/faucet
 
-### 🚧Gerekli kurulumlar
+#### 🚧Gerekli kurulumlar
+
 ```
 sudo apt update && sudo apt upgrade -y
 sudo apt install curl git wget htop tmux build-essential jq make lz4 gcc unzip -y
 ```
 
-### 🚧Go kurulumu
+#### 🚧Go kurulumu
+
 ```
 cd $HOME
 VER="1.21.3"
@@ -76,7 +85,9 @@ echo "export PATH=$PATH:/usr/local/go/bin:~/go/bin" >> ~/.bash_profile
 source $HOME/.bash_profile
 [ ! -d ~/go/bin ] && mkdir -p ~/go/bin
 ```
-### 🚧Varyasyon atama - cüzdan adını ve moniker adını değiştirin.
+
+#### 🚧Varyasyon atama - cüzdan adını ve moniker adını değiştirin.
+
 ```
 echo "export WALLET="wallet"" >> $HOME/.bash_profile
 echo "export MONIKER="Adını-yaz"" >> $HOME/.bash_profile
@@ -84,7 +95,9 @@ echo "export SIDE_CHAIN_ID="S2-testnet-1"" >> $HOME/.bash_profile
 echo "export SIDE_PORT="48"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
-### 🚧Dosyaları çekelim ve kuralım
+
+#### 🚧Dosyaları çekelim ve kuralım
+
 ```
 cd $HOME
 
@@ -104,22 +117,30 @@ make install
 
 sided version
 ```
-### 🚧İnit
-Not: adınızı yazın 
+
+#### 🚧İnit
+
+Not: adınızı yazın
+
 ```
 sided config node tcp://localhost:${SIDE_PORT}657
 sided config keyring-backend os
 sided config chain-id S2-testnet-2
 ```
+
 ```
 sided init "Adını-yaz" --chain-id S2-testnet-2
 ```
-### 🚧Genesis ve addrbook
+
+#### 🚧Genesis ve addrbook
+
 ```
 wget -O $HOME/.side/config/genesis.json https://raw.githubusercontent.com/molla202/Side/main/genesis.json
 wget -O $HOME/.side/config/addrbook.json https://raw.githubusercontent.com/molla202/Side/main/addrbook.json
 ```
-### Seed peer
+
+#### Seed peer
+
 ```
 sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.005uside\"/;" ~/.side/config/app.toml
 external_address=$(wget -qO- eth0.me) 
@@ -131,7 +152,9 @@ sed -i.bak -e "s/^seeds =.*/seeds = \"$seeds\"/" $HOME/.side/config/config.toml
 sed -i 's/max_num_inbound_peers =.*/max_num_inbound_peers = 50/g' $HOME/.side/config/config.toml
 sed -i 's/max_num_outbound_peers =.*/max_num_outbound_peers = 50/g' $HOME/.side/config/config.toml
 ```
-### 🚧Port ayar
+
+#### 🚧Port ayar
+
 ```
 sed -i.bak -e "s%:1317%:${SIDE_PORT}317%g;
 s%:8080%:${SIDE_PORT}080%g;
@@ -141,7 +164,9 @@ s%:8545%:${SIDE_PORT}545%g;
 s%:8546%:${SIDE_PORT}546%g;
 s%:6065%:${SIDE_PORT}065%g" $HOME/.side/config/app.toml
 ```
-### 🚧Port ayar
+
+#### 🚧Port ayar
+
 ```
 sed -i.bak -e "s%:26658%:${SIDE_PORT}658%g;
 s%:26657%:${SIDE_PORT}657%g;
@@ -150,7 +175,9 @@ s%:26656%:${SIDE_PORT}656%g;
 s%^external_address = \"\"%external_address = \"$(wget -qO- eth0.me):${SIDE_PORT}656\"%;
 s%:26660%:${SIDE_PORT}660%g" $HOME/.side/config/config.toml
 ```
-### 🚧Puring
+
+#### 🚧Puring
+
 ```
 pruning="custom"
 pruning_keep_recent="1000"
@@ -161,12 +188,16 @@ sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_rec
 sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.side/config/app.toml
 sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.side/config/app.toml
 ```
-### İndexer
+
+#### İndexer
+
 ```
 indexer="null" &&
 sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.side/config/config.toml
 ```
-### 🚧Servis oluşturalım
+
+#### 🚧Servis oluşturalım
+
 ```
 sudo tee /etc/systemd/system/sided.service > /dev/null <<EOF
 [Unit]
@@ -183,7 +214,9 @@ LimitNOFILE=65535
 WantedBy=multi-user.target
 EOF
 ```
-### 🚧Snap
+
+#### 🚧Snap
+
 ```
 sided tendermint unsafe-reset-all --home $HOME/.sidechain
 if curl -s --head curl http://37.120.189.81/side_testnet/side_snap.tar.lz4 | head -n 1 | grep "200" > /dev/null; then
@@ -192,28 +225,40 @@ if curl -s --head curl http://37.120.189.81/side_testnet/side_snap.tar.lz4 | hea
   echo no have snap
 fi
 ```
-### 🚧Başlatalım ve loglara bakalım
+
+#### 🚧Başlatalım ve loglara bakalım
+
 ```
 sudo systemctl daemon-reload
 sudo systemctl enable sided
 ```
+
 ```
 sudo systemctl restart sided && sudo journalctl -u sided -f
 ```
-### 🚧Cüzdan oluşturma - kelimeleri yedekleyin
+
+#### 🚧Cüzdan oluşturma - kelimeleri yedekleyin
+
 ```
 sided keys add cüzdan-adı-yaz --key-type="segwit"
 ```
-### 🚧Cüzdan import
+
+#### 🚧Cüzdan import
+
 ```
 sided keys add cüzdan-adı-yaz --key-type="segwit" --recover
 ```
-### 🚧Bakiye sorgulama
+
+#### 🚧Bakiye sorgulama
+
 ```
 sided query bank balances $WALLET_ADDRESS
 ```
-### 🏆Validator oluşturma
+
+#### 🏆Validator oluşturma
+
 NOT: validator ve cüzdan adınızı yaıznız. fauceti discordan alıcaksınız. link sayfanın basında var. `$request S2-testnet-1 cüzdanadresi-yaz` Bu şekilde.
+
 ```
 sided tx staking create-validator \
 --amount 1000000uside \
@@ -230,12 +275,17 @@ sided tx staking create-validator \
 --fees 1000uside \
 -y
 ```
-### Delege
-$wallet yazan kısımlara cüzdan adını yazınız  1milyon uside 1 side edıyor
+
+#### Delege
+
+$wallet yazan kısımlara cüzdan adını yazınız 1milyon uside 1 side edıyor
+
 ```
 sided tx staking delegate $(sided keys show $WALLET --bech val -a) 1000000uside --from $WALLET --chain-id S2-testnet-2 --gas auto --fees 1000uside -y
 ```
-### 🚧Delete node - Silme
+
+#### 🚧Delete node - Silme
+
 ```
 sudo systemctl stop sided
 sudo systemctl disable sided

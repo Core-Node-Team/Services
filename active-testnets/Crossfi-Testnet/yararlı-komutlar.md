@@ -1,29 +1,43 @@
-<h1 align=center> Cüzdan Yönetimi </h1>
+# Yararlı Komutlar
 
-## Cüzdan Oluştur
+## Cüzdan Yönetimi
+
+### Cüzdan Oluştur
+
 ```
 crossfid keys add wallet
 ```
-## Cüzdan Recover Et
+
+### Cüzdan Recover Et
+
 ```
 crossfid keys add wallet --recover
 ```
-## Cüzdanları Listele
+
+### Cüzdanları Listele
+
 ```
 crossfid keys list
 ```
-## Cüzdan Sil
+
+### Cüzdan Sil
+
 ```
 crossfid keys delete wallet
 ```
-## Cüzdan Bakiyesini Sorgula
+
+### Cüzdan Bakiyesini Sorgula
+
 ```
 crossfid q bank balances $(crossfid keys show wallet -a)
 ```
-#
-<h1 align=center> Validatör Yönetimi </h1>
 
-## Validatör Oluştur
+##
+
+## Validatör Yönetimi
+
+### Validatör Oluştur
+
 ```
 crossfid tx staking create-validator \
 --amount 1000000mpx \
@@ -43,7 +57,9 @@ crossfid tx staking create-validator \
 --gas-prices 5000000000mpx \
 -y
 ```
-## Validatörü Düzenle
+
+### Validatörü Düzenle
+
 ```
 crossfid tx staking edit-validator \
 --new-moniker "MONİKER_İSMİNİZ" \
@@ -58,89 +74,129 @@ crossfid tx staking edit-validator \
 --gas-prices 5000000000mpx \
 -y
 ```
-## Validatör Detayları
+
+### Validatör Detayları
+
 ```
 crossfid q staking validator $(crossfid keys show wallet --bech val -a)
 ```
-## Validatör Unjail
+
+### Validatör Unjail
+
 ```
 crossfid tx slashing unjail --from wallet --chain-id crossfi-evm-testnet-1 --gas-adjustment 1.5 --gas auto --gas-prices 5000000000mpx -y
 ```
-## Jail Olma Sebebi
+
+### Jail Olma Sebebi
+
 ```
 crossfid query slashing signing-info $(crossfid tendermint show-validator)
 ```
-## Tüm Aktif Validatörleri Listele
+
+### Tüm Aktif Validatörleri Listele
+
 ```
 crossfid q staking validators -oj --limit=3000 | jq '.validators[] | select(.status==BOND_STATUS_BONDED)' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) +  t  + .description.moniker' | sort -gr | nl
 ```
-## Tüm İnaktif Validatörleri Listele
+
+### Tüm İnaktif Validatörleri Listele
+
 ```
 crossfid q staking validators -oj --limit=3000 | jq '.validators[] | select(.status==BOND_STATUS_UNBONDED)' | jq -r '(.tokens|tonumber/pow(10; 6)|floor|tostring) +  t  + .description.moniker' | sort -gr | nl
 ```
-<h1 align=center> Token </h1>
 
-## Token Gönder
+## Token
+
+### Token Gönder
+
 ```
 crossfid tx bank send wallet <HEDEF_CÜZDAN_ADRESİ> 1000000mpx --from wallet --chain-id crossfi-evm-testnet-1 --gas-adjustment 1.5 --gas auto --gas-prices 5000000000mpx -y
 ```
-## Delegate
+
+### Delegate
+
 ```
 crossfid tx staking delegate <VALOPER_ADRESİ> 1000000mpx --from wallet --chain-id crossfi-evm-testnet-1 --gas-adjustment 1.5 --gas auto --gas-prices 5000000000mpx -y
 ```
-## Kendi Validatörüne Delegate
+
+### Kendi Validatörüne Delegate
+
 ```
 crossfid tx staking delegate $(crossfid keys show wallet --bech val -a) 1000000mpx --from wallet --chain-id crossfi-evm-testnet-1 --gas-adjustment 1.5 --gas auto ---gas-prices 5000000000mpx -y
 ```
-## Redelegate
+
+### Redelegate
+
 ```
 crossfid tx staking redelegate <İLK_VALOPER_ADRESİ> <HEDEF_VALOPER_ADRESİ> 1000000mpx --from wallet --chain-id crossfi-evm-testnet-1 --gas-adjustment 1.5 --gas auto --gas-prices 5000000000mpx -y
 ```
-## Kendi Validatöründen Başka Validatöre Redelegate
+
+### Kendi Validatöründen Başka Validatöre Redelegate
+
 ```
 crossfid tx staking redelegate $(crossfid keys show wallet --bech val -a) <VALOPER_ADRESİ> 1000000mpx --from wallet --chain-id crossfi-evm-testnet-1 --gas-adjustment 1.5 --gas auto --gas-prices 5000000000mpx -y
 ```
-## Unbond
+
+### Unbond
+
 ```
 crossfid tx staking unbond $(crossfid keys show wallet --bech val -a) 1000000mpx --from wallet --chain-id crossfi-evm-testnet-1 --gas-adjustment 1.5 --gas auto --gas-prices 5000000000mpx -y
 ```
-## Tüm Validatörlerden Komisyon ve Ödülleri Çekme
+
+### Tüm Validatörlerden Komisyon ve Ödülleri Çekme
+
 ```
 crossfid tx distribution withdraw-all-rewards --commission --from wallet --chain-id crossfi-evm-testnet-1 --gas-adjustment 1.5 --gas auto --gas-prices 5000000000mpx -y
 ```
-## Kendi Validatörünüze Ait Komisyon ve Ödülleri Çekme
+
+### Kendi Validatörünüze Ait Komisyon ve Ödülleri Çekme
+
 ```
 crossfid tx distribution withdraw-rewards $(crossfid keys show wallet --bech val -a) --commission --from wallet --chain-id crossfi-evm-testnet-1 --gas-adjustment 1.5 --gas auto --gas-prices 5000000000mpx -y
 ```
-<h1 align=center> Yönetim </h1>
 
-## Tüm Oylamaları Görüntüle
+## Yönetim
+
+### Tüm Oylamaları Görüntüle
+
 ```
 crossfid query gov proposals
 ```
-## Oylama Detaylarını Görüntüle
+
+### Oylama Detaylarını Görüntüle
+
 ```
 crossfid query gov proposal <ID>
 ```
-## Evet Oyu Ver
+
+### Evet Oyu Ver
+
 ```
 crossfid tx gov vote <ID> yes --from wallet --chain-id crossfi-evm-testnet-1 --gas-adjustment 1.5 --gas auto --gas-prices 5000000000mpx -y
 ```
-## Hayır Oyu Ver
+
+### Hayır Oyu Ver
+
 ```
 crossfid tx gov vote <ID> no --from wallet --chain-id crossfi-evm-testnet-1 --gas-adjustment 1.5 --gas auto --gas-prices 5000000000mpx -y
 ```
-## Çekimser Oyu Ver
+
+### Çekimser Oyu Ver
+
 ```
 crossfid tx gov vote <ID> abstain --from wallet --chain-id crossfi-evm-testnet-1 --gas-adjustment 1.5 --gas auto --gas-prices 5000000000mpx -y
 ```
-## Hayır Oyu ve Veto Et
+
+### Hayır Oyu ve Veto Et
+
 ```
 crossfid tx gov vote <ID> no_with_veto --from wallet --chain-id crossfi-evm-testnet-1 --gas-adjustment 1.5 --gas auto --gas-prices 5000000000mpx -y
 ```
-<h1 align=center> Yapılandırma Ayarları </h1>
 
- ## Pruning
+## Yapılandırma Ayarları
+
+### Pruning
+
 ```
 sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
@@ -149,93 +205,134 @@ sed -i \
   -e 's|^pruning-interval *=.*|pruning-interval = "10"|' \
   $HOME/.mineplex-chain/config/app.toml
 ```
-## İndexer Aç
+
+### İndexer Aç
+
 ```
 sed -i -e 's|^indexer *=.*|indexer = kv|' $HOME/.mineplex-chain/config/config.toml
 ```
-## İndexer Kapat
+
+### İndexer Kapat
+
 ```
 sed -i -e 's|^indexer *=.*|indexer = null|' $HOME/.mineplex-chain/config/config.toml
 ```
-## Port Değiştir
-> ### Port=366
+
+### Port Değiştir
+
+> #### Port=366
+
 ```
 sed -i -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:36658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:36657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:36660\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:36656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":36666\"%" $HOME/.mineplex-chain/config/config.toml
 sed -i -e "s%^address = \"tcp://localhost:1317\"%address = \"tcp://localhost:36617\"%; s%^address = \":8080\"%address = \":36680\"%; s%^address = \"localhost:9090\"%address = \"localhost:36690\"%; s%^address = \"localhost:9091\"%address = \"localhost:36691\"%; s%:8545%:36645%; s%:8546%:36646%; s%:6065%:36665%" $HOME/.mineplex-chain/config/app.toml
 ```
-## Min Gas Price Ayarla
-```
+
+### Min Gas Price Ayarla
 
 ```
-## Prometheus Aktif Et
+```
+
+### Prometheus Aktif Et
+
 ```
 sed -i -e s/prometheus = false/prometheus = true/ $HOME/.mineplex-chain/config/config.toml
 ```
-## Zincir Verilerini Sıfırla
+
+### Zincir Verilerini Sıfırla
+
 ```
 crossfid tendermint unsafe-reset-all --keep-addr-book --home $HOME/.mineplex-chain --keep-addr-book
 ```
-<h1 align=center> Durum Sorgulama ve Kontrol </h1>
 
-## Senkronizasyon Durumu
+## Durum Sorgulama ve Kontrol
+
+### Senkronizasyon Durumu
+
 ```
 crossfid status 2>&1 | jq .SyncInfo
 ```
-## Validatör Durumu
+
+### Validatör Durumu
+
 ```
 crossfid status 2>&1 | jq .ValidatorInfo
 ```
-## Node Durumu
+
+### Node Durumu
+
 ```
 crossfid status 2>&1 | jq .NodeInfo
 ```
-## Validatör Key Kontrol
+
+### Validatör Key Kontrol
+
 ```
 [[ $(crossfid q staking validator $(crossfid keys show wallet --bech val -a) -oj | jq -r .consensus_pubkey.key) = $(crossfid status | jq -r .ValidatorInfo.PubKey.value) ]] && echo -e "\n\e[1m\e[32mTrue\e[0m\n" || echo -e "\n\e[1m\e[31mFalse\e[0m\n"
 ```
-## TX Sorgulama
+
+### TX Sorgulama
+
 ```
 crossfid query tx <TX_ID>
 ```
-## Peer Adresini Öğren
+
+### Peer Adresini Öğren
+
 ```
 echo $(crossfid tendermint show-node-id)@$(curl -s ifconfig.me):$(cat $HOME/.mineplex-chain/config/config.toml | sed -n '/Address to listen for incoming connection/{n;p;}' | sed 's/.*://; s/".*//')
 ```
-## Bağlı Peerleri Öğren
+
+### Bağlı Peerleri Öğren
+
 ```
 curl -sS http://localhost:36657/net_info | jq -r ".result.peers[] | "\(.node_info.id)@\(.remote_ip):\(.node_info.listen_addr)"" | awk -F ":" "{print $1":"$NF}"
 ```
-<h1 align=center> Service Yönetimi </h1>
+
+## Service Yönetimi
 
 Servisi Etkinleştir
+
 ```
 sudo systemctl enable crossfid
 ```
+
 Servisi Devre Dışı Bırak
+
 ```
 sudo systemctl disable crossfid
 ```
+
 Servisi Başlat
+
 ```
 sudo systemctl start crossfid
 ```
+
 Servisi Durdur
+
 ```
 sudo systemctl stop crossfid
 ```
+
 Servisi Yeniden Başlat
+
 ```
 sudo systemctl restart crossfid
 ```
+
 Servis Durumunu Kontrol Et
+
 ```
 sudo systemctl status crossfid
 ```
+
 Servis Loglarını Kontrol Et
+
 ```
 sudo journalctl -u crossfid -f --no-hostname -o cat
 ```
-<h1 align=center> Node Silmek </h1>
+
+## Node Silmek
 
 ```
 sudo systemctl stop crossfid && sudo systemctl disable crossfid && sudo rm /etc/systemd/system/crossfid.service && sudo systemctl daemon-reload && rm -rf $HOME/.mineplex-chain && rm -rf $HOME/crossfi && sudo rm -rf $(which crossfid)

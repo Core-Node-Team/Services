@@ -4,7 +4,7 @@
 
 ## Active Mainnet
 
-* [Router](active-mainnet/Router/Readme.md)
+* [Router](active-mainnet/router/README.md)
   * [Kurulum](active-mainnet/Router/Kurulum.md)
     * [Manuel Kurulum](<active-mainnet/Router/Manuel Kurulum.md>)
   * [Snapshot](active-mainnet/Router/snapshot.md)
@@ -18,14 +18,13 @@
   * [Kurulum](active-mainnet/Quicksilver/Kurulum.md)
     * [Manuel Kurulum](<active-mainnet/Quicksilver/Manuel Kurulum.md>)
   * [Snapshot](active-mainnet/Quicksilver/snapshot.md)
-  * [Yararlı Komutlar](active-mainnet/Quicksilver/yararlı-komutlar.md)
+  * [Yararlı Komutlar](active-mainnet/quicksilver/yararli-komutlar.md)
   * [Update](active-mainnet/Quicksilver/Update.md)
-* [Airchains](active-mainnet/airchains/Readme.md)
-* [ELYS](active-mainnet/elys/Readme.md)
-* [Warden](active-mainnet/warden/Readme.md)
-* [Avail](active-mainnet/Avail/Readme.md)
-* [CrossFi](active-mainnet/crossfi/Readme.md)
-
+* [Airchains](active-mainnet/airchains.md)
+* [ELYS](active-mainnet/elys.md)
+* [Warden](active-mainnet/warden.md)
+* [Avail](active-mainnet/avail.md)
+* [CrossFi](active-mainnet/crossfi.md)
 
 ## Active Testnets
 
@@ -77,7 +76,7 @@
     * [Manuel Installation](active-testnets/Elys/manuel-install.md)
   * [Snapshot](active-testnets/Elys/snapshot.md)
   * [Useful Commands](active-testnets/Elys/commands.md)
-* [Ojo](active-testnets/ojo/README.md)
+* [Ojo](testnets/ojo/README.md)
   * [Installation](active-testnets/ojo/installation.md)
     * [Manuel Installation](active-testnets/ojo/manuel-install.md)
   * [Snapshot](active-testnets/ojo/snapshot.md)
@@ -95,5 +94,3 @@
 * [Pactus-Testnet](active-testnets/Pactus/Kurulum.md)
 * [NuLink-Horus 2.0](active-testnets/Nulink-Horus2.0/readme.md)
   * [Kurulum](active-testnets/Nulink-Horus2.0/Kurulum.md)
- 
-
